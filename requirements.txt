@@ -1,0 +1,9 @@
+tavily-python
+crawl4ai
+python-dotenv
+chromadb
+sentence-transformers
+google-generativeai
+openai
+huggingface-hub
+numpy

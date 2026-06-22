@@ -1,0 +1,45 @@
+# Environment & secrets
+.env
+.env.*
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Data files (large, generated — re-create via ingestion pipeline)
+data/
+data.zip
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs & databases
+*.log
+*.db
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Notes / scratch (remove these lines if you want them tracked)
+help.txt
+problem.txt
