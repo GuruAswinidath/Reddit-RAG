@@ -7,3 +7,8 @@ google-generativeai
 openai
 huggingface-hub
 numpy
+rank-bm25
+scikit-learn
+neo4j
+vaderSentiment
+streamlit

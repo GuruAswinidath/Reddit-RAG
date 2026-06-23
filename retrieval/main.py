@@ -1,37 +1,52 @@
 import sys
 
 from retrieval.llm import get_llm
-from retrieval.retriever import Retriever
+from retrieval.retriever import Retriever, METHODS
 
 
 def main():
     llm_name = "deepseek"
     embed_name = "sentence-transformer"
+    method = "vector"
 
     for arg in sys.argv:
         if arg.startswith("--llm="):
             llm_name = arg.split("=")[1]
         if arg.startswith("--embed="):
             embed_name = arg.split("=")[1]
+        if arg.startswith("--method="):
+            method = arg.split("=")[1]
 
     print(
         f"LLM: {llm_name} | "
-        f"Embeddings: {embed_name}\n"
+        f"Embeddings: {embed_name} | "
+        f"Method: {method}\n"
     )
+
+    if method not in METHODS:
+        print(
+            f"Unknown method: {method}\n"
+            f"Available: {METHODS}"
+        )
+        return
 
     llm = get_llm(llm_name)
     retriever = Retriever(
         llm=llm,
         embedding_name=embed_name,
+        method=method,
     )
 
     if "--temporal" in sys.argv:
         _temporal_mode(retriever)
     else:
-        _interactive_mode(retriever)
+        _interactive_mode(retriever, method)
 
 
-def _interactive_mode(retriever: Retriever):
+def _interactive_mode(
+    retriever: Retriever,
+    method: str,
+):
     print(
         "Ask questions about Reddit discussions."
     )
@@ -101,7 +116,9 @@ def _interactive_mode(retriever: Retriever):
             print()
             continue
 
-        print("\nSearching...\n")
+        print(
+            f"\nSearching ({method})...\n"
+        )
         result = retriever.ask(question)
         print(f"Answer:\n{result['answer']}")
         _print_sources(result["sources"])
@@ -145,8 +162,8 @@ def _print_sources(sources: list[dict]):
             if url and url not in seen:
                 seen.add(url)
                 print(
-                    f"  - r/{s['subreddit']} "
-                    f"({s['time_window']}) "
+                    f"  - r/{s.get('subreddit', '')} "
+                    f"({s.get('time_window', '')}) "
                     f"{url}"
                 )
 

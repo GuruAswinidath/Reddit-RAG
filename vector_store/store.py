@@ -16,17 +16,25 @@ BATCH_SIZE = 50
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 100
 
+_chroma_client = None
+
+
+def _get_chroma_client():
+    global _chroma_client
+    if _chroma_client is None:
+        import chromadb
+        _chroma_client = chromadb.PersistentClient(
+            path=CHROMA_DIR
+        )
+    return _chroma_client
+
 
 class VectorStore:
 
     def __init__(
         self, embedding_model: EmbeddingModel
     ):
-        import chromadb
-
-        self._client = chromadb.PersistentClient(
-            path=CHROMA_DIR
-        )
+        self._client = _get_chroma_client()
         self._embedder = embedding_model
 
         self.posts = (

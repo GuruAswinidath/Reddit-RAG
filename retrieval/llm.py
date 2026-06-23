@@ -30,7 +30,7 @@ class DeepSeekLLM(LLMModel):
             )
         )
         self._model = (
-            "deepseek-ai/DeepSeek-R1-0528"
+            "deepseek-ai/DeepSeek-V3-0324"
         )
 
     def generate(
@@ -56,7 +56,13 @@ class DeepSeekLLM(LLMModel):
                 max_tokens=2048,
             )
         )
-        return response.choices[0].message.content
+        text = response.choices[0].message.content
+        import re
+        text = re.sub(
+            r"<think>.*?</think>\s*",
+            "", text, flags=re.DOTALL,
+        )
+        return text.strip()
 
 
 class OpenAILLM(LLMModel):

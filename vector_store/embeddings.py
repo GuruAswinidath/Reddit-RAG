@@ -94,7 +94,7 @@ class SentenceTransformerEmbedding(EmbeddingModel):
         )
         self._dimension = (
             self._model
-            .get_sentence_embedding_dimension()
+            .get_embedding_dimension()
         )
 
     def embed(

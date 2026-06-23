@@ -20,58 +20,91 @@ A hybrid retrieval system over Reddit discussions about AI/LLM topics (RAG, AI s
 
 ## System Mind Map
 
+The system is four pipeline stages. Each branch below is one stage; leaves are its sub-steps or pluggable backends.
+
 ```mermaid
 mindmap
   root((Reddit Temporal RAG))
-    Ingestion
-      Search Reddit URLs
-        Tavily API
-        Google CSE backup
-      Scrape threads
+    1 Ingestion
+      Search
+        Tavily
+        Google CSE
+      Scrape
         crawl4ai
-      Parse markdown
-        title / body / comments
-        comment hierarchy
-    Preprocessing
+      Parse
+        Posts
+        Nested comments
+    2 Preprocessing
       Clean
-        strip HTML / markdown / Reddit chrome
-        drop bots & deleted comments
+        Strip noise
+        Drop bots and deleted
       Extract
-        timestamps to ISO 8601
-        authors, URLs, mentions
-        companies & model names
-        topic keywords
+        Timestamps
+        Entities
+        Topics
       Normalize
-        dedupe posts & comments
-        assign time window W1 / W2 / W3
-        quality report
-    Vector Index DONE
-      Chunk post text
-      Embed
-        sentence-transformers
-        OpenAI / Gemini / HF BGE
-      ChromaDB
-        reddit_posts collection
-        reddit_comments collection
-        metadata filters
-    Knowledge Graph PLANNED
-      LLM entity extraction
-      Neo4j
-        Author / Post / Comment / Subreddit / Entity nodes
-        temporal edge properties
-    Hybrid Retrieval
-      Vector search DONE
-      Graph traversal PLANNED
-      Reciprocal Rank Fusion PLANNED
-      Query routing PLANNED
-    Answer Generation
-      Context assembly with citations
-      LLM synthesis
-        DeepSeek / OpenAI / Gemini
-      Temporal comparison mode
+        Dedupe
+        Time windows W1 W2 W3
+        Quality report
+    3 Indexing
+      Vector Store
+        Chunk
+        Embed
+        ChromaDB
+      Knowledge Graph
+        LLM entity extraction
+        Neo4j
+    4 Retrieval and Answering
+      Vector search
+      Graph traversal
+      RRF fusion
+      Query routing
+      LLM answer with citations
+      Temporal comparison
 ```
 
-*(If your Markdown viewer doesn't render Mermaid, the same map is spelled out as nested bullets in [System Mind Map — plain text](#system-mind-map) above the diagram fence, and again throughout the sections below.)*
+**Status key** — what's wired up today vs. still planned (kept out of the diagram itself to avoid clutter, mapped to the same branches):
+
+| Stage | Sub-step | Status |
+|---|---|---|
+| 1. Ingestion | Search, Scrape, Parse | ✅ Done |
+| 2. Preprocessing | Clean, Extract, Normalize | ✅ Done |
+| 3. Indexing | Vector Store | ✅ Done |
+| 3. Indexing | Knowledge Graph | 🚧 Planned |
+| 4. Retrieval & Answering | Vector search, LLM answer, Temporal comparison | ✅ Done |
+| 4. Retrieval & Answering | Graph traversal, RRF fusion, Query routing | 🚧 Planned |
+
+<details>
+<summary>Plain-text fallback (if your viewer doesn't render Mermaid)</summary>
+
+```
+Reddit Temporal RAG
+├── 1. Ingestion                         [done]
+│   ├── Search        → Tavily / Google CSE
+│   ├── Scrape         → crawl4ai
+│   └── Parse           → posts + nested comments
+├── 2. Preprocessing                     [done]
+│   ├── Clean           → strip noise, drop bots/deleted
+│   ├── Extract          → timestamps, entities, topics
+│   └── Normalize        → dedupe, time windows, quality report
+├── 3. Indexing
+│   ├── Vector Store                     [done]
+│   │   ├── Chunk
+│   │   ├── Embed         → sentence-transformers / OpenAI / Gemini / HF BGE
+│   │   └── ChromaDB
+│   └── Knowledge Graph                  [planned]
+│       ├── LLM entity extraction
+│       └── Neo4j
+└── 4. Retrieval & Answering
+    ├── Vector search                    [done]
+    ├── Graph traversal                  [planned]
+    ├── RRF fusion                       [planned]
+    ├── Query routing                    [planned]
+    ├── LLM answer with citations        [done]
+    └── Temporal comparison              [done]
+```
+
+</details>
 
 ---
 
