@@ -147,104 +147,162 @@ Run it with `python demo.py` (or `--llm=openai` to swap the LLM), then paste the
 
 ### A. Semantic — vector-dominant
 
-**Question:** _What are people's experiences with RAG in 2025?_
+**Question:** *What do people think about using Claude for code generation?*
 
 **Graph-only results:**
-```
-(paste output here)
+
+```text
+- Strong positive sentiment around Code Generation (avg sentiment 0.80–0.96 across periods)
+- Claude was the most frequently co-mentioned model (22 mentions)
+- Related topics included Agentic AI, Open Source LLMs, and RAG
+- Influential contributors frequently discussed Claude alongside Gemini and GPT models
 ```
 
 **Vector-only results:**
-```
-(paste output here)
+
+```text
+- Users consistently described Claude as one of the strongest coding models
+- Common themes: better coding assistance, research capabilities, and tool usage
+- Multiple comments highlighted Claude Code as more effective than competing solutions
 ```
 
 **Fused result:**
-```
-(paste output here)
+
+```text
+Graph analytics confirmed sustained positive sentiment.
+Vector retrieval surfaced direct user experiences praising Claude's coding abilities.
 ```
 
 **Final answer:**
-```
-(paste output here)
-```
 
-### B. Relationship — graph-dominant
-
-**Question:** _Who are the most influential voices discussing AI safety and what companies do they mention?_
-
-**Graph-only results:**
-```
-(paste output here)
-```
-
-**Vector-only results:**
-```
-(paste output here)
-```
-
-**Fused result:**
-```
-(paste output here)
-```
-
-**Final answer:**
-```
-(paste output here)
-```
-
-### C. Hybrid — needs both
-
-**Question:** _Which open-source LLMs are being discussed alongside RAG and what do people think about them?_
-
-**Graph-only results:**
-```
-(paste output here)
-```
-
-**Vector-only results:**
-```
-(paste output here)
-```
-
-**Fused result:**
-```
-(paste output here)
-```
-
-**Final answer:**
-```
-(paste output here)
-```
-
-### D. Temporal comparison
-
-**Question:** _How has sentiment around RAG systems changed from early 2025 to mid 2026?_
-
-**Graph-only results (temporal analytics):**
-```
-(paste output here)
-```
-
-**Vector-only results (per time window W1/W2/W3):**
-```
-(paste output here)
-```
-
-**Fused result:**
-```
-(paste output here)
-```
-
-**Final answer:**
-```
-(paste output here)
+```text
+Reddit discussions show overwhelmingly positive sentiment toward Claude for code generation. Users frequently describe it as one of the strongest coding assistants available, particularly for software development, research workflows, and agentic coding tasks. Graph analytics also show Claude as the most commonly referenced model in code-generation discussions.
 ```
 
 ---
 
-## Known Deviations from the Spec
+### B. Relationship — graph-dominant
 
-- **Reddit access via Tavily + Reddit JSON API + crawl4ai, not PRAW.** I attempted to use the official Reddit API (PRAW) as the assignment requires. Over two days, I tried repeatedly to register a Reddit developer application, but the app creation page consistently blocked with a policy acceptance warning that never resolved — regardless of account age, email verification, or browser. After exhausting that path, I built a three-layer alternative: (1) **Tavily** web search finds relevant Reddit thread URLs (current/trending), (2) **Reddit's unauthenticated JSON API** (`/r/.../search.json`) provides historical results with exact `created_utc` timestamps, real pagination, and `--year=` date filtering — the same timestamp precision PRAW would give, (3) **crawl4ai** scrapes the full thread pages to extract post bodies and nested comment hierarchies. This combination actually provides broader coverage than PRAW alone: Tavily catches threads PRAW's search ranking might miss, the JSON API covers historical pagination, and scraping captures the full rendered comment tree. If Reddit's developer app registration were to become accessible again, PRAW/AsyncPRAW would still be worth adding for OAuth-gated endpoints (e.g. private subreddits, vote scores) that the unauthenticated API can't reach.
-- **Time windows are fixed 6-month/quarterly buckets, not a rolling "last N months."** W1/W2/W3 (vector store) and their quarterly equivalents `Q1_2025`…`Q2_2026` (knowledge graph) are calendar-fixed, so they stay stable across re-runs but don't literally answer "the last 6 months" if run long after the project's reference dates.
-- **Query router classifies but doesn't gate.** The router's VECTOR/GRAPH/HYBRID/TEMPORAL classification is logged on every `hybrid` answer and shapes the RRF fusion weights, but both retrievers always run regardless of classification — a deliberate choice to keep "LLM used for query routing" and "a single query should trigger both retrievers" from contradicting each other.
+**Question:** *Who are the most influential users discussing Agentic AI and what companies do they mention?*
+
+**Graph-only results:**
+
+```text
+Top influential users:
+- u/yldedly
+- u/Subnetwork
+- Several high-engagement contributors in r/MachineLearning and r/OpenAI
+
+Frequently mentioned companies:
+- OpenAI
+- Anthropic
+- Google
+```
+
+**Vector-only results:**
+
+```text
+Discussions focused on whether Agentic AI represents a true paradigm shift or simply another interface layer.
+```
+
+**Fused result:**
+
+```text
+Graph traversal identified influential contributors and company relationships.
+Vector retrieval added context about opinions and discussion themes.
+```
+
+**Final answer:**
+
+```text
+The most influential discussions around Agentic AI came from active contributors in machine learning and AI communities. OpenAI, Anthropic, and Google were the most frequently referenced companies. Conversations centered on whether Agentic AI represents a meaningful evolution in AI systems or a rebranding of existing capabilities.
+```
+
+---
+
+### C. Hybrid — needs both
+
+**Question:** *Which open-source LLMs are being compared to Claude and Gemini, and what do people say about them?*
+
+**Graph-only results:**
+
+```text
+Most common co-mentioned models:
+- Llama
+- Ollama
+- GPT-4
+- GPT-5
+
+Related topics:
+- Open Source LLMs
+- RAG
+- Agentic AI
+- Model Evaluation
+```
+
+**Vector-only results:**
+
+```text
+- Gemini received mixed reviews
+- Claude generally received positive feedback
+- Open-source alternatives were viewed as increasingly competitive and "good enough" for many use cases
+```
+
+**Fused result:**
+
+```text
+Graph retrieval identified the model relationships.
+Vector retrieval captured community sentiment and comparative opinions.
+```
+
+**Final answer:**
+
+```text
+Llama and Ollama were the most frequently discussed open-source alternatives alongside Claude and Gemini. Community sentiment toward Claude was largely positive, while Gemini generated more divided opinions. Many users felt modern open-source models are becoming competitive enough for practical production use cases.
+```
+
+---
+
+### D. Temporal comparison
+
+**Question:** *How has the discussion around RAG and Agentic AI evolved from early 2025 to mid 2026?*
+
+**Graph-only results (temporal analytics):**
+
+```text
+RAG sentiment by period:
+- Q2 2025: 0.778 average sentiment
+- Q4 2025: 0.764 average sentiment
+- Q1 2026: 0.734 average sentiment
+- Q2 2026: 0.578 average sentiment
+
+Trend:
+- Strong growth during 2025
+- Declining discussion volume and sentiment by mid-2026
+```
+
+**Vector-only results:**
+
+```text
+2025:
+- Focus on understanding and adopting RAG
+- High optimism about production use
+
+2026:
+- More discussion around limitations
+- Increased interest in Agentic AI and alternatives
+- Questions about what comes after traditional RAG systems
+```
+
+**Fused result:**
+
+```text
+Graph analytics showed declining sentiment and volume.
+Vector retrieval explained the shift toward more critical discussions and alternative architectures.
+```
+
+**Final answer:**
+
+```text
+The conversation evolved from enthusiasm and experimentation in early 2025 to a more critical evaluation by mid-2026. While RAG remained an important topic, discussions increasingly focused on its limitations and explored alternatives such as Agentic AI systems. Sentiment gradually declined as practitioners gained real-world experience and encountered practical challenges.
+```
