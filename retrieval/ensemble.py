@@ -46,15 +46,21 @@ class EnsembleRetriever(BaseRetriever):
 def reciprocal_rank_fusion(
     result_lists: list[list[RetrievedDoc]],
     k: int = 60,
+    weights: list[float] = None,
 ) -> list[RetrievedDoc]:
+    if weights is None:
+        weights = [1.0] * len(result_lists)
+
     rrf_scores = {}
     doc_map = {}
 
-    for results in result_lists:
+    for results, weight in zip(
+        result_lists, weights
+    ):
         for rank, doc in enumerate(results):
             rrf_scores[doc.id] = (
                 rrf_scores.get(doc.id, 0.0)
-                + 1.0 / (k + rank + 1)
+                + weight / (k + rank + 1)
             )
             if doc.id not in doc_map:
                 doc_map[doc.id] = doc

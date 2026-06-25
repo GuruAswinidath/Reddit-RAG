@@ -1,8 +1,9 @@
 import os
 import re
-from datetime import datetime
-from urllib.parse import quote_plus
+import time as _time
+from datetime import datetime, timezone
 
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -16,7 +17,7 @@ TARGET_SUBREDDITS = [
     "MachineLearning",
 ]
 
-TOPICS = [
+DEFAULT_TOPICS = [
     "RAG",
     "AI Safety",
     "GPT-4o",
@@ -27,11 +28,20 @@ TOPICS = [
     "Vector Database",
 ]
 
-TIME_VARIANTS = ["2025", "2026"]
+TIME_VARIANTS = ["2023", "2024", "2025", "2026"]
 
 POST_URL_PATTERN = re.compile(
     r"reddit\.com/r/\w+/comments/\w+"
 )
+
+REDDIT_HEADERS = {
+    "User-Agent": (
+        "reddit-rag-scraper/1.0 "
+        "(research project)"
+    ),
+}
+
+REDDIT_RATE_DELAY = 2.0
 
 
 def _get_post_id(url: str) -> str | None:
@@ -61,56 +71,27 @@ def _deduplicate_urls(
     return unique
 
 
-def _build_subreddit_query(query: str) -> str:
-    subreddit_filter = " OR ".join(
-        f"r/{sub}" for sub in TARGET_SUBREDDITS
-    )
-    return f"{query} ({subreddit_filter})"
-
-
-def _filter_subreddit_urls(
-    urls: list[str],
-) -> list[str]:
-    pattern = re.compile(
-        r"reddit\.com/r/("
-        + "|".join(TARGET_SUBREDDITS)
-        + r")/",
-        re.IGNORECASE,
-    )
-    return [
-        url for url in urls
-        if pattern.search(url)
-    ]
-
-
-def _build_time_queries(
-    topic: str,
-) -> list[str]:
-    queries = [topic]
-    for year in TIME_VARIANTS:
-        queries.append(f"{topic} {year}")
-    return queries
+def _year_bounds(year: int):
+    start = datetime(
+        year, 1, 1, tzinfo=timezone.utc
+    ).timestamp()
+    end = datetime(
+        year + 1, 1, 1, tzinfo=timezone.utc
+    ).timestamp()
+    return start, end
 
 
 # -----------------------------------------
-# Single topic search
+# Single topic search (Tavily)
 # -----------------------------------------
 
 async def search_reddit_urls(
     query: str,
-    num_results: int = 50,
-    engine: str = "tavily",
-    restrict_subreddits: bool = True,
+    num_results: int = 20,
 ) -> list[dict]:
-    if engine == "google_cse":
-        raw_urls = await _google_cse_search(
-            query, num_results
-        )
-    else:
-        raw_urls = _tavily_search(
-            query, num_results,
-            restrict_subreddits,
-        )
+    raw_urls = _tavily_search(
+        query, min(num_results, 20),
+    )
 
     now = datetime.now().isoformat()
 
@@ -121,7 +102,7 @@ async def search_reddit_urls(
         results.append({
             "url": url,
             "search_topic": query,
-            "search_engine": engine,
+            "search_engine": "tavily",
             "searched_at": now,
         })
 
@@ -129,47 +110,142 @@ async def search_reddit_urls(
 
 
 # -----------------------------------------
-# Multi-topic search (all topics + time)
+# Multi-topic search (Tavily + Reddit API)
 # -----------------------------------------
 
 async def search_all_topics(
-    num_results: int = 50,
-    engine: str = "tavily",
-    restrict_subreddits: bool = True,
+    topics: list[str] = None,
+    num_results: int = 20,
+    restrict_subreddits: bool = False,
     use_time_variants: bool = True,
+    year_filter: int = None,
+    max_pages: int = 3,
 ) -> list[dict]:
+    _ = num_results
+    if topics is None:
+        topics = DEFAULT_TOPICS
+
+    subreddits = (
+        TARGET_SUBREDDITS
+        if restrict_subreddits
+        else ["all"]
+    )
+
     all_results = []
 
-    for topic in TOPICS:
-        if use_time_variants:
-            queries = _build_time_queries(topic)
-        else:
-            queries = [topic]
+    # --- Phase 1: Tavily (current/trending) ---
+    print("\n  Phase 1: Tavily search "
+          "(current/trending)...")
+
+    for topic in topics:
+        queries = [topic]
+        if year_filter:
+            queries.append(
+                f"{topic} {year_filter}"
+            )
+        elif use_time_variants:
+            for year in TIME_VARIANTS:
+                queries.append(
+                    f"{topic} {year}"
+                )
 
         for query in queries:
-            print(f"  Searching: {query}")
-
-            topic_results = (
-                await search_reddit_urls(
-                    query=query,
-                    num_results=num_results,
-                    engine=engine,
-                    restrict_subreddits=(
-                        restrict_subreddits
-                    ),
+            for sub in subreddits:
+                full_q = (
+                    f"{query} r/{sub}"
+                    if sub != "all"
+                    else query
                 )
+                results = (
+                    await search_reddit_urls(
+                        full_q, num_results=20,
+                    )
+                )
+                for r in results:
+                    r["search_topic"] = topic
+                all_results.extend(results)
+
+        tavily_count = len(
+            _deduplicate_urls(
+                list(all_results)
+            )
+        )
+        print(
+            f"    {topic}: running total "
+            f"{tavily_count} unique"
+        )
+
+    # --- Phase 2: Reddit API (historical) ---
+    year_label = (
+        f" (year={year_filter})"
+        if year_filter else ""
+    )
+    print(
+        f"\n  Phase 2: Reddit JSON API "
+        f"(historical + paginated)"
+        f"{year_label}..."
+    )
+
+    for topic in topics:
+        for sub in subreddits:
+            reddit_posts = _reddit_api_search(
+                query=topic,
+                subreddit=sub,
+                sort_options=[
+                    "relevance", "top", "new",
+                ],
+                time_filters=["all", "year"],
+                max_pages=max_pages,
+                year_filter=year_filter,
             )
 
-            for r in topic_results:
-                r["search_topic"] = topic
+            now = datetime.now().isoformat()
+            for post in reddit_posts:
+                all_results.append({
+                    "url": post["url"],
+                    "search_topic": topic,
+                    "search_engine": "reddit_api",
+                    "searched_at": now,
+                    "post_id": post.get(
+                        "post_id"
+                    ),
+                    "api_title": post.get(
+                        "title"
+                    ),
+                    "api_author": post.get(
+                        "author"
+                    ),
+                    "api_created_at": post.get(
+                        "created_at"
+                    ),
+                    "api_score": post.get(
+                        "score"
+                    ),
+                    "api_num_comments": post.get(
+                        "num_comments"
+                    ),
+                    "api_subreddit": post.get(
+                        "subreddit"
+                    ),
+                })
 
-            all_results.extend(topic_results)
-            print(
-                f"    Found {len(topic_results)} "
-                f"URLs"
+        reddit_count = len(
+            _deduplicate_urls(
+                list(all_results)
             )
+        )
+        print(
+            f"    {topic}: running total "
+            f"{reddit_count} unique"
+        )
 
     deduped = _deduplicate_urls(all_results)
+
+    if year_filter:
+        print(
+            f"\n  Filtered to year "
+            f"{year_filter}"
+        )
 
     print(
         f"\n  Total unique posts: {len(deduped)}"
@@ -184,7 +260,6 @@ async def search_all_topics(
 def _tavily_search(
     query: str,
     num_results: int,
-    restrict_subreddits: bool,
 ) -> list[str]:
     from tavily import TavilyClient
 
@@ -192,81 +267,197 @@ def _tavily_search(
         api_key=os.getenv("TAVILY_API_KEY")
     )
 
-    search_query = query
-    if restrict_subreddits:
-        search_query = _build_subreddit_query(
-            query
+    try:
+        response = client.search(
+            query=query,
+            max_results=min(num_results, 20),
+            search_depth="advanced",
+            include_domains=["reddit.com"],
         )
+    except Exception as e:
+        print(f"    Tavily error: {e}")
+        return []
 
-    response = client.search(
-        query=search_query,
-        max_results=num_results,
-        include_domains=["reddit.com"],
-    )
-
-    urls = [
+    return [
         result["url"]
-        for result in response["results"]
+        for result in response.get(
+            "results", []
+        )
     ]
 
-    if restrict_subreddits:
-        urls = _filter_subreddit_urls(urls)
-
-    return urls
-
 
 # -----------------------------------------
-# Google CSE
+# Reddit JSON API (no auth needed)
 # -----------------------------------------
 
-async def _google_cse_search(
+def _reddit_api_search(
     query: str,
-    num_results: int,
-) -> list[str]:
-    from crawl4ai import AsyncWebCrawler
+    subreddit: str,
+    sort_options: list[str] = None,
+    time_filters: list[str] = None,
+    max_pages: int = 3,
+    year_filter: int = None,
+) -> list[dict]:
+    if sort_options is None:
+        sort_options = ["relevance", "top"]
+    if time_filters is None:
+        time_filters = ["all", "year"]
 
-    cse_id = os.getenv("GOOGLE_CSE_ID")
-    encoded_query = quote_plus(query)
-    url = (
-        f"https://cse.google.com/cse"
-        f"?cx={cse_id}&q={encoded_query}"
+    yr_start, yr_end = (
+        _year_bounds(year_filter)
+        if year_filter else (None, None)
     )
 
-    async with AsyncWebCrawler() as crawler:
-        result = await crawler.arun(url=url)
+    found = {}
 
-    reddit_urls = []
-    seen = set()
+    for sort in sort_options:
+        for t_filter in time_filters:
+            after = None
 
-    if result.links:
-        all_links = (
-            result.links.get("external", [])
-            + result.links.get("internal", [])
+            for _page in range(max_pages):
+                posts, after = (
+                    _reddit_api_page(
+                        query, subreddit,
+                        sort, t_filter, after,
+                    )
+                )
+
+                for p in posts:
+                    pid = p.get("post_id")
+                    if not pid or pid in found:
+                        continue
+
+                    if yr_start is not None:
+                        utc = p.get(
+                            "created_utc", 0
+                        )
+                        if (
+                            utc < yr_start
+                            or utc >= yr_end
+                        ):
+                            continue
+
+                    found[pid] = p
+
+                if not after:
+                    break
+
+    return list(found.values())
+
+
+def _reddit_api_page(
+    query: str,
+    subreddit: str,
+    sort: str,
+    time_filter: str,
+    after: str | None,
+) -> tuple[list[dict], str | None]:
+    url = (
+        f"https://www.reddit.com"
+        f"/r/{subreddit}/search.json"
+    )
+
+    params = {
+        "q": query,
+        "sort": sort,
+        "t": time_filter,
+        "limit": 100,
+        "restrict_sr": (
+            "true" if subreddit != "all"
+            else "false"
+        ),
+        "type": "link",
+    }
+    if after:
+        params["after"] = after
+
+    try:
+        _time.sleep(REDDIT_RATE_DELAY)
+
+        resp = requests.get(
+            url,
+            params=params,
+            headers=REDDIT_HEADERS,
+            timeout=15,
         )
-        for link in all_links:
-            href = (
-                link.get("href", "")
-                if isinstance(link, dict)
-                else str(link)
+
+        if resp.status_code == 429:
+            print(
+                "    Rate limited, waiting 10s..."
             )
-            if (
-                "reddit.com" in href
-                and href not in seen
-            ):
-                seen.add(href)
-                reddit_urls.append(href)
+            _time.sleep(10)
+            resp = requests.get(
+                url,
+                params=params,
+                headers=REDDIT_HEADERS,
+                timeout=15,
+            )
 
-    if not reddit_urls and result.markdown:
-        pattern = (
-            r"https?://(?:www\.)?reddit\.com"
-            r"/r/[^\s\)\]\"\'><,]+"
+        if resp.status_code != 200:
+            return [], None
+
+        data = resp.json()
+        children = (
+            data.get("data", {})
+            .get("children", [])
         )
-        for match in re.findall(
-            pattern, result.markdown
-        ):
-            clean = match.rstrip(".,;:!?)")
-            if clean not in seen:
-                seen.add(clean)
-                reddit_urls.append(clean)
 
-    return reddit_urls[:num_results]
+        posts = []
+        for child in children:
+            d = child.get("data", {})
+            permalink = d.get("permalink", "")
+            if not permalink:
+                continue
+
+            full_url = (
+                f"https://www.reddit.com"
+                f"{permalink}"
+            )
+            if not _is_valid_post_url(full_url):
+                continue
+
+            created_utc = d.get(
+                "created_utc", 0
+            )
+            created_at = (
+                datetime.fromtimestamp(
+                    created_utc,
+                    tz=timezone.utc,
+                ).isoformat()
+                if created_utc else ""
+            )
+
+            posts.append({
+                "url": full_url,
+                "post_id": _get_post_id(
+                    full_url
+                ),
+                "title": d.get("title", ""),
+                "author": d.get("author", ""),
+                "subreddit": d.get(
+                    "subreddit", ""
+                ),
+                "created_utc": created_utc,
+                "created_at": created_at,
+                "score": d.get("score", 0),
+                "num_comments": d.get(
+                    "num_comments", 0
+                ),
+                "selftext": d.get(
+                    "selftext", ""
+                )[:500],
+            })
+
+        next_after = (
+            data.get("data", {}).get("after")
+        )
+
+        return posts, next_after
+
+    except Exception as e:
+        print(
+            f"    Reddit API error "
+            f"({subreddit}/{sort}/{time_filter})"
+            f": {e}"
+        )
+        return [], None

@@ -1,0 +1,1489 @@
+[
+  {
+    "post_id": "1smvj1m",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1smvj1m/cloud_ai_is_getting_expensive_and_im_considering",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1smvj1m/cloud_ai_is_getting_expensive_and_im_considering",
+    "author": "ttkciar",
+    "title": "Cloud AI is getting expensive and I'm considering a Claude/Codex + local LLM hybrid for shipping web apps",
+    "body": "Discussion \nI'm a designer who's been working on web apps and plugins for the past 5 months. Right now I'm building an After Effects plugin (close to shipping) and a music learning game experience. \nI've been exclusively using Claude Code with the 100$ plan (20$ plan is too limited) and although I was happy with it, it felt wasteful because I only ever used up to half the token capacity. I don't do parallel projects or agentic automation and stuff. My work is mostly local, linear with a lot of design thinking, UX testing and such. \nMoney being short and Claude beginning to fumble the last sprint of code polish in my project, I stopped the 100$ subscription and tried Codex 20$ plan. So far I'm very happy with how tight and conservative it is, exactly what I needed at this phase of the plugin development. I thought I could get by with their 20$ plan but I also hit limits after only 1.5h of work (GPT 5.4 high and codebase review for pre-release last debug stuff). Which felt barely more than Claude. \nI feel now I don't have much choice. All AI providers are tightening their services (even Z.ai) while making it more expensive. A 50$ plan would be perfect for me but 100$ is too much while 20$ doesn't give enough. So my plan right now is to use both Codex and Claude 20$ plans and do my best to save on tokens with careful management. \nIt's doable but I'm considering adding a local coding LLM to my stack for the grunt work. Use Claude for design thinking, Codex for tight implementation plans and a local LLM for the actual coding. \nIt seems that local LLMs are getting pretty good but it's still tricky hardware-wise. I have a RTX 3080ti with 12Gb VRAM, it's decent but limited. I program mostly with the web stack (JS, TS, CSS, Tauri, a tad of python...) \nI'd appreciate some honest opinions, Is a Claude + Codex + local LLM stack a realistic workflow to ship web apps on a 3080 Ti? \nNeed a quick proof of concept? We've got you.\nfigma.com \n \n* \n* \n* \n* \nbob.ibm.com",
+    "created_at": "2026-04-26T17:10:30.963959",
+    "time_window": "W3",
+    "topics": [
+      "Agentic AI",
+      "Open Source LLM",
+      "LLM Evaluation"
+    ],
+    "comments": [
+      {
+        "comment_id": "ogh3las",
+        "post_id": "1smvj1m",
+        "parent_id": "1smvj1m",
+        "author": "ttkciar",
+        "body": "Top 1% Commenter I don't think 12GB of VRAM is going to be enough to host a codegen model worth using. Sorry :-(",
+        "created_at": "2026-04-26T17:10:30.963959",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/search/?q=codegen+model+local+LLM&cId=d2853c3b-e96f-4ee5-a68c-acdc61ff0ee9&iId=53d0e875-8c7e-4e1f-89a0-205c130dcb0a",
+            "https://www.reddit.com/user/rezgi/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ogh600f",
+        "post_id": "1smvj1m",
+        "parent_id": "ogh3las",
+        "author": "rezgi",
+        "body": "Yes I thought the same, I guess it's better to invest the money they're asking for.",
+        "created_at": "2026-04-26T17:10:30.963959",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oghcdop",
+        "post_id": "1smvj1m",
+        "parent_id": "ogh600f",
+        "author": "INT_21h",
+        "body": "You could try Qwen3.5 35B-A3B . MoE models run decently fast even if they don't entirely fit in VRAM.",
+        "created_at": "2026-04-26T17:10:30.963959",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/search/?q=Qwen3.5+35B-A3B+LLM&cId=653eae27-7f4e-4322-8b24-9e128d19cc27&iId=29ee62b1-836e-45e8-92cc-643c4db0b5f1",
+            "https://www.reddit.com/search/?q=MoE+models+local+LLM&cId=34733f85-803e-4d12-baba-32598b215d11&iId=0fa0400a-a853-488e-b5af-604ac3fa0ccc"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Qwen3.5"
+          ]
+        }
+      },
+      {
+        "comment_id": "ogh3q7v",
+        "post_id": "1smvj1m",
+        "parent_id": "1smvj1m",
+        "author": "dametsumari",
+        "body": "Depends on how much value you put on your time. If you are hobbyist, maybe, otherwise, never. Your partially local stack will be slower and producer inferior results. If you are willing to toss lots of money at the problem, or have security requirements , the answer may or may not change.",
+        "created_at": "2026-04-26T17:10:30.963959",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/search/?q=hybrid+LLM+stack+performance&cId=b5751bc8-cee0-49c7-8b15-7ebf5e319fe2&iId=05d03c19-ca2b-40db-813d-1da5575c5acf",
+            "https://www.reddit.com/user/rezgi/",
+            "https://www.reddit.com/search/?q=LLM+security+requirements&cId=a5b06303-e088-4d79-afa5-671d1757c15b&iId=32faf5d9-85f8-4494-9dc3-00483c463dd9"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ogh61rx",
+        "post_id": "1smvj1m",
+        "parent_id": "ogh3q7v",
+        "author": "rezgi",
+        "body": "Well the whole point was to save money but I think I don't have much choice.",
+        "created_at": "2026-04-26T17:10:30.963959",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 5,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Discussion%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [],
+      "mentioned_models": [
+        "Claude",
+        "Codex",
+        "GPT-5",
+        "Claude 20"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:10:30.963959"
+  },
+  {
+    "post_id": "1rofaiw",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1rofaiw/localai_is_gaining_on_cloud_ai",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1rofaiw/localai_is_gaining_on_cloud_ai",
+    "author": "current_state_of_ai_tools_in_android_studio",
+    "title": "Local-AI is gaining on Cloud AI",
+    "body": "Other \nNow that ChatGPT 5.x is nerfed (personal and some public opinion) and local AI has reached a new level with the new Qwen 3.5 family. I would now dare to say that we are getting closer to private GPT level AI. Still miss as good features as memory handling of CloudAI but hopefully someone will solve that too. \nWith spec-driven development, Kiro turns your natural language prompt into clear requirements and acceptance criteria. Less ambiguity, more precise code.\nkiro.dev",
+    "created_at": "2026-02-25T17:10:32.836795",
+    "time_window": "W3",
+    "topics": [
+      "LLM Evaluation"
+    ],
+    "comments": [
+      {
+        "comment_id": "o9dh8si",
+        "post_id": "1rofaiw",
+        "parent_id": "1rofaiw",
+        "author": "FriskyHamTitz",
+        "body": "Yeah, I was wondering the same thing chatgpt got nerfed right? It used to be way better, it seems like the cut attention to scale requests",
+        "created_at": "2026-02-25T17:10:32.836795",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Daniel_H212/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o9eerlh",
+        "post_id": "1rofaiw",
+        "parent_id": "o9dh8si",
+        "author": "Daniel_H212",
+        "body": "They quantized KV cache or something?",
+        "created_at": "2026-02-25T17:10:32.836795",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/waitmarks/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o9hpb8p",
+        "post_id": "1rofaiw",
+        "parent_id": "o9eerlh",
+        "author": "waitmarks",
+        "body": "Top 1% Commenter They definitely seem to be trying to cost optimize it ever since 4o. I think it's just gotten really aggressive recently since they are starting to run out of funding.",
+        "created_at": "2026-02-25T17:10:32.836795",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 3,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Other%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [],
+      "mentioned_models": [
+        "Qwen 3.5"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:10:32.836795"
+  },
+  {
+    "post_id": "1sp8qit",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sp8qit/can_local_ai_7b14b_models_actually_replace_claude",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1sp8qit/can_local_ai_7b14b_models_actually_replace_claude",
+    "author": "No_Algae1753",
+    "title": "Can local AI (7B-14B models) actually replace Claude Code, Perplexity & ElevenLabs? Need a hard reality check.",
+    "body": "Question | Help \nHey folks, considering a big investment (for me ofc) for a laptop w/ RTX 5080 (16GB VRAM) + 64GB RAM to go 100% local AI and cut ~$200/mo in cloud subs (Claude Pro, ElevenLabs, Nano Banana Pro, Perplexity). \n My goal: Coding like Claude Code (full projects from prompts), uncensored image/music/voice gen, private company knowledge base + personal advisor, Telegram remote control, web search ONLY from whitelisted sources. \nMy doubts: \n- Can a 7B-14B model with good RAG + prompts actually handle multi-file projects, or will I drown in context limits & architecture headaches? \n- Is 16GB VRAM enough for simultaneous: coding + image gen + voice cloning + RAG, or will I be constantly swapping models? \n- Can you build a truly source-controlled local web search (SearXNG + whitelist), or is it always a half-solution? \nQuestions for you: \n 1. Anyone actually replaced cloud AI (Claude Code/GPT/ElevenLabs/Nano Banana Pro) with a local 7B-14B stack? What broke first? \n 2. What does real-world coding workflow look like locally? How do you handle context limits on bigger projects? \n 3. 16GB VRAM + 64GB RAM: enough for parallel tasks, or constant memory juggling? \n 4. Worth taking a long-term loan for local AI hardware, or better to wait for cheaper VRAM and stay in cloud? \n\nDrop your stacks, bottlenecks, and hot takes. \nWe built an observability + evaluation platform for local LLMs. 100% free and open source.\ngithub.com \n \nGenerate images and video at scale. Vast.ai GPUs cost 80% less than AWS.\nBook Now\nvast.ai",
+    "created_at": "2026-04-26T17:10:34.475814",
+    "time_window": "W3",
+    "topics": [
+      "RAG",
+      "Open Source LLM",
+      "LLM Evaluation"
+    ],
+    "comments": [
+      {
+        "comment_id": "ogyq0bt",
+        "post_id": "1sp8qit",
+        "parent_id": "ogyl741",
+        "author": "KptEmreU",
+        "body": "Local LLMs have strong ROI for people who keep their machines and agents running continuously. This could be for ongoing tasks, managing data flows, or experimenting with more freeform \"vibe coding.\" However, if you're not a power user, paying $20 to a major AI provider is usually the better option. That said, tinkering with local LLMs is still valuable, setting up agents, automating things like email checks, and exploring the system is enjoyable. But if you're only checking your email a few times a day, that $20 service will likely do the job better than a local setup, even if it lacks the same sense of satisfaction.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Barto0sz/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ogysbxf",
+        "post_id": "1sp8qit",
+        "parent_id": "ogyq0bt",
+        "author": "Barto0sz",
+        "body": "Good point on power users vs casual. I think I fall into the power user category. Question though: even as a power user, do you think the hardware investment makes sense, or should I stick to cloud + wait for better local options? Curious what your setup is.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ogymq1w",
+        "post_id": "1sp8qit",
+        "parent_id": "1sp8qit",
+        "author": "__JockY__",
+        "body": "Top 1% Commenter In short: 1. No. The models are too brain dead. 2. Large models configured for 200k context limit with support for multiple sequences at full context length; hosted in vLLM; use Claude cli as agentic coder. 3. Not even remotely enough. 4 Never borrow money for depreciating assets. Sorry, but what you're talking about just takes VRAM and lots of it, and unless GPUs are gonna pay their way then they're not worth getting into debt for.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Barto0sz/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "ogyoya7",
+        "post_id": "1sp8qit",
+        "parent_id": "ogymq1w",
+        "author": "Barto0sz",
+        "body": "Fair points. One question: 1. When you say \"brain dead\", what specific tasks fail? Is it architecture planning, multi-file refactors, or just general reasoning? BTW On the loan: I get it's depreciating, but I'm currently paying ~$200/mo for cloud subs. Hardware loan is ~$100/mo but covers 2 workstations + phones for 8 years. Not trying to argue, genuinely curious: what's your setup and what would you do in my shoes?",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/__JockY__/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ohbd1uz",
+        "post_id": "1sp8qit",
+        "parent_id": "ogyoya7",
+        "author": "__JockY__",
+        "body": "Top 1% Commenter Small models can't plan, get stuck in loops, write shitty code, are poor at following instructions and repeatedly compound small errors in to a bad experience. > ? Hardware loan is ~$100/mo but covers 2 workstations + phones for 8 years. 8 YEARS??? You'd be paying interest on a potato 3 years from now. In 5 years from now you'll be weeping tears of regret with another 3 years to go. Brother, an 8-year loan for high-end gear is an 8-year loan for gear that'll be obsolete in 3 years. For the love of all that's holy don't get into debt for 8 years for a computer, that's CRAZY. Remember: you can _stop_ paying a subscription any time. You can cut that cost. You can't do that 6 years from now when you're still paying nothing but interest on obsolete gear. Just buy what you can afford and suck it up.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ogylrbr",
+        "post_id": "1sp8qit",
+        "parent_id": "1sp8qit",
+        "author": "DinoAmino",
+        "body": "Top 1% Commenter What information have you found so far? A quick search here ( rule #1) will show you dozens of similar posts and plenty of discussion about exactly what you are asking.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Barto0sz/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ogyn59r",
+        "post_id": "1sp8qit",
+        "parent_id": "ogylrbr",
+        "author": "Barto0sz",
+        "body": "Did search before posting. Found lots of benchmarks and single-workflow discussions, but not much on running coding + RAG + image/voice gen simultaneously on 16GB VRAM with source-controlled web search. If you've seen a thread covering that exact combo, happy to check it out. Otherwise curious what your take is based on what you've read here.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ohk0qa1",
+        "post_id": "1sp8qit",
+        "parent_id": "ogyn59r",
+        "author": "maz_net_au",
+        "body": "I'm running locally on 96gb of vram. It's still doesn't compare to the paid models at this point. Maybe revisit as pricing / usage limits change.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/DinoAmino/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ogyolx7",
+        "post_id": "1sp8qit",
+        "parent_id": "ogyn59r",
+        "author": "DinoAmino",
+        "body": "Top 1% Commenter Lol. Can't infer from multiple sources? Might as well stick with what is working for you then and avoid the disappointment. It takes real effort to make local highly effective. Especially with all those use cases.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "ogyr2zs",
+        "post_id": "1sp8qit",
+        "parent_id": "1sp8qit",
+        "author": "Inevitable_Mistake32",
+        "body": "I'm not on the same boat as everyone else apparently. I have been using opencode as my harness and as of the very moment Qwen3.6-35B-A3B-Q4_K_M unsloth on my 7900xtx + 64gb ddr5 at a steady 100tk/s at 256k ctx (full). It is my daily driver, I never run out of credits, apis don't respond slow. It just chugs and chugs. I have gotten through more projects and tokens using local ai over claude or any other frontier models. My use cases for the frontier models? I happened to get the z.ai coding lite plan on that crazy deal so when I want to free up resources I just point my harness to GLM-5.1, but since we all know its slow, I switch it back to local once I'm not using my desktop intensively (gaming or rendering). It has a 1.5GB GPU VRAM headroom which is plenty for my hyprland and a few firefox/yt/terminal sessions going. Long story short, I had to deal with either slow tk/s (qwen 122b+) or had to deal with braindead models (looking at you llama <120b series). Now with Gemma, Qwen3.6, Nemotron, I have choice and it doesn't impede my workflows. Gemma4 27B is remarkably smart, so it does my research, Qwen3.6 does everything else. edit: I re-read that he's talking about 7-14b models. Depends on the use case, but I have successfully used my qwen 9b for RAG and NIAH tasks.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Fabix84/",
+            "http://z.ai"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Qwen3.6",
+            "Claude",
+            "Llama"
+          ]
+        }
+      },
+      {
+        "comment_id": "ogz6vfh",
+        "post_id": "1sp8qit",
+        "parent_id": "1sp8qit",
+        "author": "Fabix84",
+        "body": "I have 384 GB of VRAM and it's in barely acceptable condition. In any case, it's not even comparable to the superior intelligence of a model like Claude Opus 4.7.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude Opus 4.7"
+          ]
+        }
+      },
+      {
+        "comment_id": "ogyn947",
+        "post_id": "1sp8qit",
+        "parent_id": "1sp8qit",
+        "author": "No_Run8812",
+        "body": "1. Anyone actually replaced cloud AI (Claude Code/GPT/ElevenLabs/Nano Banana Pro) with a local 7B-14B stack? What broke first? 1. Starting next month I will just pay Claude and open ai $20 just for planing and the doer will be 3.6 35B A3B and Gemma 31B dense. 7B and 17B are a joke if you want to act on things not just chat. 2. What does real-world coding workflow look like locally? How do you handle context limits on bigger projects? 1. I am planning to use multi agent 3. 16GB VRAM + 64GB RAM: enough for parallel tasks, or constant memory juggling? 1. 64 you can run quantized versions 4. Worth taking a long-term loan for local AI hardware, or better to wait for cheaper VRAM and stay in cloud? 1. don't invest heavily on hardware, get something which can run one 30 - 40B model and try it for 2 weeks, otherwise return. tbh M5 max 129gig would be best for trial.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Barto0sz/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "ogypxml",
+        "post_id": "1sp8qit",
+        "parent_id": "ogyn947",
+        "author": "Barto0sz",
+        "body": "Thanks for the direct answers. A few follow-ups: 1. You're running 35B and 31B, what hardware? And how's the speed compared to Claude? 2. Multi-agent setup - what framework? AutoGen, CrewAI, something else? Also curious: if 7B-17B are a joke for work, what's the smallest model you'd actually use for real work?",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "ogynidb",
+        "post_id": "1sp8qit",
+        "parent_id": "1sp8qit",
+        "author": "ortegaalfredo",
+        "body": "Top 1% Commenter What do you mean by \"replace\" ? write code at the same quality? obviously not. Write code at the quality they had 6 months ago? if you can run minimax/qwen3-397 (5k+ investment) then yes.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Barto0sz/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "qwen3"
+          ]
+        }
+      },
+      {
+        "comment_id": "ogyqnir",
+        "post_id": "1sp8qit",
+        "parent_id": "ogynidb",
+        "author": "Barto0sz",
+        "body": "Good clarification. By \"replace\" I mean: 80-90% of my current coding tasks (building full projects from prompts, multi-file changes, debugging) Not necessarily the most complex architecture planning or massive refactors Questions: 1. You mention minimax/qwen3-397 - what hardware specs does that need? You said $5k+, what's the VRAM requirement? 2. For someone with $2-3k budget (2x RTX 5080 laptops), what's the biggest model I can realistically run for coding? Trying to figure out if my plan is totally off, or if there's a middle ground.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "qwen3"
+          ]
+        }
+      },
+      {
+        "comment_id": "ogytsr7",
+        "post_id": "1sp8qit",
+        "parent_id": "ogyqnir",
+        "author": "ortegaalfredo",
+        "body": "Top 1% Commenter You need about 128GB of ram/VRAM to run minimax, that is the smallest one. I think a nvidia spark or a AMD 395 AI+ should be enough to run it at decent speeds, we are talking about a ~2000 usd system. Current version of Minimax (2.7) is absolutely enough to code anything. Its equivalent to Sonnet 4.5 or even better. A good replacement is Gemma4 31B or qwen3-27B, you only need 32/24 gb of VRAM but its slower and not as good.",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Nvidia"
+          ],
+          "mentioned_models": [
+            "qwen3"
+          ]
+        }
+      },
+      {
+        "comment_id": "oh6ot1b",
+        "post_id": "1sp8qit",
+        "parent_id": "1sp8qit",
+        "author": "baradas",
+        "body": "Let's start with augmentation before replacement. built to augment the claude coding harness by adding an auto-pilot mode. claudectl learns from your actions, nothing ever leaves your box - and a fully local brain you install",
+        "created_at": "2026-04-26T17:10:34.475814",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://github.com/mercurialsolo/claudectl"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      }
+    ],
+    "comment_count": 17,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Question%20%7C%20Help%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [
+        "Perplexity"
+      ],
+      "mentioned_models": [
+        "Claude"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:10:34.475814"
+  },
+  {
+    "post_id": "1sf305a",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1sf305a/cloud_ai_subscriptions_are_getting_desperate_with",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1sf305a/cloud_ai_subscriptions_are_getting_desperate_with",
+    "author": "silenceimpaired",
+    "title": "Cloud AI subscriptions are getting desperate with retention. honestly makes me want to go more local",
+    "body": "Discussion \n * \n * \n\nOk so two things happened this week that made me appreciate my local setup way more \ntried to cancel cursor ($200/mo ultra plan) and they instantly threw 50% off at me before I could even confirm. no survey, no exit flow, just straight to \"please stay.\" thats not confidence lol \nthen claude (im on the $100/mo pro plan) started giving me free API calls. 100 one day, 100 the next day. no email about it, no announcement, just free compute showing up. very \"please dont leave\" energy \ntheir core customers are software engineers and... we're getting laid off in waves. 90k+ tech jobs gone this year. every layoff = cancelled subscription. makes sense the retention is getting aggresive \nmeanwhile my qwen 3.5 27B on my 5060 Ti doesnt give a shit about the economy. no monthly fee. no retention emails. no \"we noticed you havent logged in lately.\" it just runs \nnot saying local replaces cloud for everything. cursor is still way better for agentic coding than anything I can run locally tbh. but watching cloud providers panic makes me want to push more stuff local. less dependency on someone elses pricing decisions \nanyone else shifting more workload to local after seeing stuff like this?",
+    "created_at": "2026-03-27T17:10:35.994928",
+    "time_window": "W3",
+    "topics": [
+      "Agentic AI"
+    ],
+    "comments": [
+      {
+        "comment_id": "oeudcw5",
+        "post_id": "1sf305a",
+        "parent_id": "1sf305a",
+        "author": "silenceimpaired",
+        "body": "Top 1% Commenter I avoid cloud because cloud providers made my hardware - specifically RAM more expensive. Have you tried the new Gemma 4?",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oeuro8n",
+        "post_id": "1sf305a",
+        "parent_id": "oeudcw5",
+        "author": "remoteDev1",
+        "body": "not yet but been seeing really good things about it especially after the kv cache fix landed in llama.cpp. was worried about the vram usage at first but sounds like its way more usable now. probably trying it this week",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Llama"
+          ]
+        }
+      },
+      {
+        "comment_id": "oeunhe0",
+        "post_id": "1sf305a",
+        "parent_id": "oeudcw5",
+        "author": "Electrical_Date_8707",
+        "body": "dude its so good I have no idea what google was thinking with this one",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Google"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oeuyjk4",
+        "post_id": "1sf305a",
+        "parent_id": "oeunhe0",
+        "author": "silenceimpaired",
+        "body": "Top 1% Commenter I avoid cloud because cloud providers made my hardware - specifically RAM more expensive. Yeah, I'm liking it. I think as the models get better locally they are also getting more brittle and changeable. I hope I'm wrong, and I guess with Apache licensing we will see.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oew2u61",
+        "post_id": "1sf305a",
+        "parent_id": "oeudcw5",
+        "author": "SpicyWangz",
+        "body": "As a whole I want to get away from cloud, and I do whenever possible. But there's a lot of more complex situations that require me to fall back on it. I probably do around 50/50. I would love to get away from it completely eventually, mainly because of how bad data centers are for a community.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oeuv6h3",
+        "post_id": "1sf305a",
+        "parent_id": "1sf305a",
+        "author": "MrHaxx1",
+        "body": "Of all the issues with cloud AI, your issue is that they are giving you discounts???",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oevlg4s",
+        "post_id": "1sf305a",
+        "parent_id": "oeuv6h3",
+        "author": "misha1350",
+        "body": "Yes, it speaks of the problems with their liquidity. It's a clearly a downward spiral. It's going to get worse and worse for them.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oewpe5z",
+        "post_id": "1sf305a",
+        "parent_id": "1sf305a",
+        "author": "a_beautiful_rhind",
+        "body": "Top 1% Commenter I never really paid for any cloud besides some $10 deals. Didn't experience this. What I do see instead is free inference more or less drying up compared to past years. Are you _really_ using $200 of costs for them? If they keep you at $100 maybe next month you forget to cancel? Hopefully you actually got free API calls, not ones it simply miscounted. Occasionally those have shown up later with other providers.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/TheDailySpank/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oexht9b",
+        "post_id": "1sf305a",
+        "parent_id": "oewpe5z",
+        "author": "TheDailySpank",
+        "body": "I had someone who used to treat ChatGPT and Grok like they were almost sentient do a 180 within the last month. They finally accepted local generation because of Gemma 4 and a one time $500 video card buy-in. It's fast enough for them and that's subscription-less™.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Grok"
+          ]
+        }
+      },
+      {
+        "comment_id": "oexly1k",
+        "post_id": "1sf305a",
+        "parent_id": "oexht9b",
+        "author": "VampiroMedicado",
+        "body": "What GPU? 26B A4B?",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oeuffnx",
+        "post_id": "1sf305a",
+        "parent_id": "1sf305a",
+        "author": "Plastic-Stress-6468",
+        "body": "Cancelled chatgpt in November and got a one month free deal. I think it was 5.1 being more useless than ever pissing me off and maybe gemini or grok was much more useful by comparison so I switched over. Then came February and Gemini got lobotomized, and Grok's new 4.2 heavy ended up just being 4x 4.1 thinking duking it out - which to be fair is still better than Gemini since it hallucinates less and actively searches the web so it won't be confidently wrong - but it gave me the push to finally look into running things locally again. I tried running ollama back in August last year and local models were just kinda shit on my 4090 relative to SOTAs at the time. Now my 5090 is actually usable running qwen3.5 and gemma4 with 120k context. It's actually viable for work now. Though now I regret not buying something like an Asus GX10 or anything with MAC's UMA architecture for the same 3kish spend.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/LanternOfTheLost/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Gemini",
+            "Grok",
+            "qwen3.5"
+          ]
+        }
+      },
+      {
+        "comment_id": "oewi27u",
+        "post_id": "1sf305a",
+        "parent_id": "oeuffnx",
+        "author": "LanternOfTheLost",
+        "body": "Their billing page has a bug. ChatGPT claimed they were giving me a month off in January, then February, then March, and now April. That date kept updating every month, and the bills kept coming too. Except for January.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/deejeycris/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oeumbas",
+        "post_id": "1sf305a",
+        "parent_id": "oeuffnx",
+        "author": "deejeycris",
+        "body": "You should try openai again it got better and doesn't have the same absurd quotas of anthropic.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai",
+            "Anthropic"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oexlrrd",
+        "post_id": "1sf305a",
+        "parent_id": "oeumbas",
+        "author": "VampiroMedicado",
+        "body": "Between the free models which one do you consider better for general chatting? If you tried them extensively I mean, early this year Gemini Flash was very good but as the main comment said it got lobotomized. I was using Claude Sonnet but it's very stingy for the free account.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Gemini Flash",
+            "Claude Sonnet"
+          ]
+        }
+      },
+      {
+        "comment_id": "oewthyc",
+        "post_id": "1sf305a",
+        "parent_id": "1sf305a",
+        "author": "z0_o6",
+        "body": "I'm working on a stack using LiteLLM as a router, a tailnet, and my 5090 as the workhorse for as much as possible. Claude API escalation, LLMLingua for compression, headroom as well. It's still in work, but it should yield a significant reduction in token usage without neutering capability. It also naturally strips a lot of minable data out of any cloud queries.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/o0genesis0o/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "oew2itg",
+        "post_id": "1sf305a",
+        "parent_id": "1sf305a",
+        "author": "o0genesis0o",
+        "body": "How good is the 27B on your 5060Ti? I guess you need to partially offload layers to CPU, regardless of context window, right? I have the 4060Ti 16GB that is still running OSS 20B and Qwen 30B. If the 27B does not run that bad, I could spend a weekend to change the model.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oewzscl",
+        "post_id": "1sf305a",
+        "parent_id": "oew2itg",
+        "author": "DepressedDrift",
+        "body": "Correct me if I am wrong but if you can run a 30b model, you can definitely run Gemma 4 26B 4B at Q4 quantization",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/o0genesis0o/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oex0cao",
+        "post_id": "1sf305a",
+        "parent_id": "oewzscl",
+        "author": "o0genesis0o",
+        "body": "Yeah, I think with some expert offloading, I can even run Q6 with at least 65k context. I'm more curious about OP's claim that they can run the dense 27B on the 5060Ti. Last time I run devstral 24B, it was very slow to be practical in agentic coding. Just wonder if they have any magic config to make the dense 27B viable.",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oeykb3v",
+        "post_id": "1sf305a",
+        "parent_id": "1sf305a",
+        "author": "CrypticZombies",
+        "body": "paying for cursor.. jokes on you",
+        "created_at": "2026-03-27T17:10:35.994928",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/EasyShelter/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 19,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Discussion%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [
+        "LocalLLaMA"
+      ],
+      "mentioned_companies": [],
+      "mentioned_models": [
+        "Claude",
+        "qwen 3.5"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:10:35.994928"
+  },
+  {
+    "post_id": "1scse0t",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1scse0t/which_is_more_resilient_20_devs_with_local_ai_vs",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1scse0t/which_is_more_resilient_20_devs_with_local_ai_vs",
+    "author": "koushd",
+    "title": "Which is more resilient? 20 Devs with Local AI vs. Downsizing to 8 Devs with Cloud AI?",
+    "body": "Sorry, this post was deleted by the person who originally posted it.",
+    "created_at": "2026-03-27T17:10:37.921126",
+    "time_window": "W3",
+    "topics": [],
+    "comments": [
+      {
+        "comment_id": "oedc8nt",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "koushd",
+        "body": "ngl I'd lay off the guy that thinks that running gen ai locally on a MacBook for coding is going a good idea",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/iansltx_/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedcpel",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "iansltx_",
+        "body": "The healthcare costs for the extra 12 alone will cost more than the token budget for the 8. So this basically comes down to \"do we do a massive layoff or do we empower the folks who are already around.\" I am 100% for option B for the record, for the reasons that you mentioned. But even a 128GB RAM MaxBook won't run Kimi or GLM-5 so if you rely on local LLMs rather than cloud ones _of some sort_ you're going to be able to automate a subset of the things you can automate by yeeting Opus at the problem. You can confirm this without buying the hardware by picking the same models via OpenRouter and paying per token. Other note here is that, with a significant step change in codegen speeds that removes a bottleneck on an entire step in the process, drastically cutting a team either signals that folks are out of ideas or that they are overly optimistic about AI-ensbled velocity to the point that they think fewer people will do more in an environment where usually other parts of the organization aren't tweaked to keep dev folks unblocked. This is top of mind for me for reasons that I'm happy to answer in DMs, or messages on some other platform. My handle is easy enough to trace back to actual-me.",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/PassengerPigeon343/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedjbm2",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "PassengerPigeon343",
+        "body": "How about a hybrid approach? Empower your top devs with the best tools and have the more junior devs experiment and use local options? If you cut from 20 to 8 people, you risk the remaining people losing morale (they will), getting burned out (they will), and losing 1 or 2+ out of 8 hurts a lot more than out of 20. If you really need to cut, consider 1 or 2 if you have low performers, but a 60% headcount reduction will almost certainly backfire.",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/CC_NHS/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedodr3",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "CC_NHS",
+        "body": "this is such a strange choice, it can only be hypothetical. anyone in a position to make that choice, wouldn't be asking on Reddit (unless they somehow got in well above their skillset) but in the hypothetical it seems like two separate choices. switching from cloud based AI to local on MacBook's... cloud based is more capable and cheaper, but questionable data privacy. using MacBooks is way more expensive and keeps your data. And downsizing team would be down to speed of development Vs cost. honestly the team size is very project dependant. if you have 20 and can do it with 8, then you need 8... if you need 20 and downsize to 8... you go slower. if you give them all macbooks it costs more... and they go even slower. it just seems like it's not thought through at all. or just trying to rage bait over job loss question I dunno",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/TyphoonGZ/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedecdp",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "TyphoonGZ",
+        "body": "The electricity spent running LLMs on those macbooks could be more expensive than just using an API. At least, where I'm from, that's the case.",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedg34b",
+        "post_id": "1scse0t",
+        "parent_id": "oedecdp",
+        "author": "kkingsbe",
+        "body": "And that's not even factoring in the inference speed, context window, etc",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedfyh7",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "kkingsbe",
+        "body": "What are you smoking over there. Just get one of the z.ai/minimax subscriptions per dev for $50/mo... CC/Codex aren't the only options out there's this is such a stupid decision for you to think is necessary, im honestly astonished lol",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Codex"
+          ]
+        }
+      },
+      {
+        "comment_id": "oedk2c8",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "jikilan_",
+        "body": "Instead of cutting down , why not doing more with the number of ppl you already have? R&D together with cloud AI. local might be harder",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedv4r5",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "dzhopa",
+        "body": "Idk, I've got 10 devs absolutely hammering away at Opus because we have a shitload of free credits and I'm trying to benchmark it. We've only managed about $2500 in Anthropic in a month on our best attempt. I'd wager most of the work accomplished could have been solved by a substantially cheaper model. I know almost all of my Opus work could have, and I represent about $500 of that $2500. I just wanted it to be right / easy / fast. Like others have said, just get your people a cheaper AI subscription from China lol. Local ain't going to save money; it's purely for privacy, repeatability, and control.",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/audioen/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Anthropic"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oee5xkc",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "audioen",
+        "body": "To me, this is a false choice and doesn't make much sense. First choice: keep 8 devs and give them top tier AI. I assume that very specific calculations of productivity and cost has been factored into these numbers. The hope is that AI with 8 of the best developers can replace the lost productivity of 12 people. I don't know. It is possible, probably, especially if some employees are slow. Likely the AI for the 8 people costs around as much as 1-2 employees would have, so this represent instant halving of the cost with possibly similar output as before, assuming the AI-assisted employees can make up the lost productivity. Second choice: keep 20 devs but provide them a local AI to boost productivity also. I can't really understand this choice from the above paragraph's cost and productivity basis. This represents increasing the organization's coding output while adding also cost to it coming from hardware and upkeep of AI software and so forth. But this also has to represent a different future scenario, one where more coding output is required. Or perhaps you're assuming that AI brings zero additional productivity and therefore all 20 employees are still required. To me, these are not comparable scenarios, so I am struggling to understand the basic business case. I think from business perspective, local AI is \"worse and cheaper\". So your plan should reflect the reduced efficiency of AI, like maybe in your plan 10 people can be laid off, but 2 additional employees can be kept because local AI is cheaper and makes up their payroll. However, is the coding output similar from losing half the workforce when assisted by local AI? I doubt it, but it's up to you to work out these numbers. If local AI was sufficiently better and could fit on a Macbook -- which may well be the case later in 2026 or sometime in 2027 -- this scenario might be approximately equivalent. Today, I think it's not the reality.",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/cmndr_spanky/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedoemp",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "cmndr_spanky",
+        "body": "Opus 4.6 and fewer devs. Without hesitation. Although who knows.. ask me again in a year",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "oedjqav",
+        "post_id": "1scse0t",
+        "parent_id": "1scse0t",
+        "author": "BringMeTheBoreWorms",
+        "body": "If you need to ask reddit this question then you have no capability of to begin with",
+        "created_at": "2026-03-27T17:10:37.921126",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Radiant-Video7257/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 12,
+    "extracted": {
+      "urls": [],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [],
+      "mentioned_models": []
+    },
+    "scraped_at": "2026-06-25T17:10:37.921126"
+  },
+  {
+    "post_id": "1rld6rh",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1rld6rh/the_convergence_between_local_and_cloud_ai_models",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1rld6rh/the_convergence_between_local_and_cloud_ai_models",
+    "author": "Middle_Bullfrog_6173",
+    "title": "The convergence between local and cloud AI models is happening faster than most people think",
+    "body": "Discussion \nI've been tracking MMLU scores for the best model runnable on a base Mac Mini since 2021. The trajectory is striking: \n- 2021: GPT-J 6B - 28% MMLU \n- 2023: Mistral 7B - 60% \n- 2025: Phi-4 14B - 84.8% \n- 2026: Qwen 3.5 9B (MoE) - 88% \nClaude Opus 4.6 sits at 91%. \nThe interesting part isn't just the scores, it's that the 2026 model is actually smaller than the 2025 one. MoE architecture means only ~3B parameters fire per token, so you get near-frontier performance on 16GB of RAM. \nIf this trend continues, a base Mac Mini could plausibly run a model matching today's cloud frontier by 2027. \nI wrote a longer analysis with an interactive chart here if anyone's interested: \nCurious what this community thinks - are we underestimating how fast this gap is closing? \nToo many dev tools? ClickUp brings backlogs, bugs, sprints, and docs into one place so your team can ship faster.\nView More\nclickup.com",
+    "created_at": "2026-02-25T17:10:39.752403",
+    "time_window": "W3",
+    "topics": [
+      "LLM Evaluation"
+    ],
+    "comments": [
+      {
+        "comment_id": "o8r4oif",
+        "post_id": "1rld6rh",
+        "parent_id": "1rld6rh",
+        "author": "Middle_Bullfrog_6173",
+        "body": "MMLU is just saturated. More difficult benchmarks show that the gap is still there. And niche benchmarks often show a larger gap than the most popular ones. As does actual use IMO. The good news is that if your tasks are easy you don't have to care. Local is certainly \"good enough\" for many uses today.",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o8r5y42",
+        "post_id": "1rld6rh",
+        "parent_id": "o8r4oif",
+        "author": "samimandeel",
+        "body": "Agreed. But I'm just using Opus 4.6's MMLU as the benchmark for what's \"good enough\" today on frontier models. The point is, most of us will be 'selling our SLR's because our phones are \"good enough\"'.",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o8r5a8c",
+        "post_id": "1rld6rh",
+        "parent_id": "1rld6rh",
+        "author": "dsanft",
+        "body": "6 year old account with 1 post karma and no comment history? Who are you?",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o8r5g01",
+        "post_id": "1rld6rh",
+        "parent_id": "o8r5a8c",
+        "author": "samimandeel",
+        "body": "Someone that just started using reddit.",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o97smb6",
+        "post_id": "1rld6rh",
+        "parent_id": "o8r5a8c",
+        "author": "FarAd8149",
+        "body": "Me? Iol",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o8r77f3",
+        "post_id": "1rld6rh",
+        "parent_id": "1rld6rh",
+        "author": "ortegaalfredo",
+        "body": "Top 1% Commenter Do not trust benchmarks, they are a guidance only. I would say the cheapest cloud AI models (I.e. gemini flash) are still a little better than the best local models.",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Gemini Flash"
+          ]
+        }
+      },
+      {
+        "comment_id": "o8r82rf",
+        "post_id": "1rld6rh",
+        "parent_id": "o8r77f3",
+        "author": "samimandeel",
+        "body": "Fair point on not trusting benchmarks blindly. But the question is: what else do we have? Vibes are even less reliable. Benchmarks are imperfect, but they're the best quantitative signal we've got for tracking progress over time. The trend line matters more than any single number.",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o8rivog",
+        "post_id": "1rld6rh",
+        "parent_id": "1rld6rh",
+        "author": "ABLPHA",
+        "body": "Qwen 3.5 9B is dense, not MoE",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Qwen 3.5"
+          ]
+        }
+      },
+      {
+        "comment_id": "o8rkmk5",
+        "post_id": "1rld6rh",
+        "parent_id": "o8rivog",
+        "author": "samimandeel",
+        "body": "1. Official Hugging Face model card - Qwen/Qwen3.5-9B The official model page explicitly lists \"Efficient Hybrid Architecture: Gated Delta Networks combined with sparse Mixture-of-Experts\" as a core architectural feature. 2. Official Hugging Face model card - Qwen/Qwen3.5-9B-Base The base model card repeats the same: \"Gated Delta Networks combined with sparse Mixture-of-Experts deliver high-throughput inference with minimal latency and cost overhead.\" 3. Official QwenLM GitHub repo The official GitHub confirms Qwen3.5-9B released on March 2, 2026 as part of the Qwen3.5 family - the same family that launched with a 397B-A17B MoE model, all sharing the same hybrid architecture. 4. Ollama library page Ollama's listing also states the architecture is \"Gated Delta Networks combined with sparse Mixture-of-Experts.\" 5. VentureBeat VentureBeat reports: \"Alibaba has moved toward an Efficient Hybrid Architecture that combines Gated Delta Networks (a form of linear attention) with sparse Mixture-of-Experts (MoE)... the 0.8B to 9B models are re-engineered for efficiency, utilising a hybrid architecture that activates only the necessary parts of the network for each task.\" 6. NVIDIA Technical Blog (on the Qwen3.5 series) NVIDIA's developer blog describes the Qwen3.5 series as \"built with a hybrid architecture of mixture of experts (MoE) and Gated Delta Networks.\" 7. Medium - Data Science in Your Pocket Covering the small model release: \"Qwen 3.5 Small takes a different route. It uses a hybrid architecture combining Gated Delta Networks with sparse Mixture-of-Experts (MoE). This allows the model to activate only the parts of the network needed for a task.\" 8. StableLearn deep-dive Explicitly labels the Qwen3.5 small series (including 9B) as \"Qwen3.5 MoE series (0.8B-397B) with Gated DeltaNet hybrid attention,\" noting \"the 9B beats GPT-OSS-120B.\" 9. Oflight Inc. technical guide A dedicated Qwen3.5-9B technical guide states: \"The most significant technical breakthrough in Qwen3.5-9B is its hybrid architecture combining Gated Delta Networks (DeltaNet) with Sparse Mixture-of-Experts (MoE)... the Sparse MoE structure activates only the most relevant experts for each input token, meaning that while the model has 9B total parameters, the effective parameters during inference are significantly fewer.\" 10. Medium - Adithya Giridharan technical breakdown Describes the entire Qwen3.5 architecture as using \"Gated Delta Networks, sparse MoE routing, and native multimodal fusion,\" with the hybrid design originating from Qwen3-Next and carried through all 3.5 models including the small series. 11. DigitalApplied.com Notes that the entire Qwen 3.5 family is \"built around a sparse Mixture-of-Experts (MoE) architecture\" from the flagship 397B down through the smaller models. 12. Hugging Face - Qwen3.5-35B-A3B (the sibling model) The companion model card confirms the shared architecture across the entire Qwen3.5 family: \"Efficient Hybrid Architecture: Gated Delta Networks combined with sparse Mixture-of-Experts.\"",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://huggingface.co/Qwen/Qwen3.5-9B",
+            "https://huggingface.co/Qwen/Qwen3.5-9B-Base",
+            "https://medium.com/data-science-in-your-pocket/qwen-3-5-small-model-series-released-7a5ed34fcbb3",
+            "https://www.reddit.com/user/ABLPHA/",
+            "https://www.digitalapplied.com/blog/qwen-3-5-agentic-ai-benchmarks-guide",
+            "https://huggingface.co/Qwen/Qwen3.5-35B-A3B",
+            "https://venturebeat.com/technology/alibabas-small-open-source-qwen3-5-9b-beats-openais-gpt-oss-120b-and-can-run",
+            "https://medium.com/@AdithyaGiridharan/alibaba-just-dropped-qwen-3-5-cf35aab0c862",
+            "https://ollama.com/library/qwen3.5",
+            "http://DigitalApplied.com",
+            "https://github.com/QwenLM/Qwen3.5",
+            "https://developer.nvidia.com/blog/develop-native-multimodal-agents-with-qwen3-5-vlm-using-nvidia-gpu-accelerated-endpoints/",
+            "https://www.oflight.co.jp/en/columns/qwen35-9b-complete-guide",
+            "https://stable-learn.com/en/qwen35-native-multimodal-agent-model/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Hugging Face",
+            "Huggingface",
+            "Nvidia"
+          ],
+          "mentioned_models": [
+            "Qwen3.5",
+            "qwen3",
+            "Qwen 3.5",
+            "qwen-3",
+            "qwen35"
+          ]
+        }
+      },
+      {
+        "comment_id": "o8rln6o",
+        "post_id": "1rld6rh",
+        "parent_id": "o8rkmk5",
+        "author": "ABLPHA",
+        "body": "MoE models include the number of activated parameters in their name. 35B-A3B, 122B-A10B, 397B-A17B. 9B doesn't. Not all of the Qwen 3.5 models are MoE",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Qwen 3.5"
+          ]
+        }
+      },
+      {
+        "comment_id": "o8tffht",
+        "post_id": "1rld6rh",
+        "parent_id": "1rld6rh",
+        "author": "Economy_Cabinet_7719",
+        "body": "Qwen's model cards on HF themselves list Qwen 3.5 9B scoring 82 on MMLU-Pro, not 88: Where did you get 88?",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://huggingface.co/Qwen/Qwen3.5-9B#language"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Huggingface"
+          ],
+          "mentioned_models": [
+            "Qwen 3.5",
+            "Qwen3.5"
+          ]
+        }
+      },
+      {
+        "comment_id": "o8xms0y",
+        "post_id": "1rld6rh",
+        "parent_id": "1rld6rh",
+        "author": "Athlyst",
+        "body": "The local-vs-cloud tradeoff here is exactly why I'm looking into this. For teams that stay cloud-heavy and sell through app stores or enterprise marketplaces, have you seen a meaningful cash-timing problem from paying inference costs now while payout or procurement cycles drag weeks later? I'm not asking whether model costs matter; they obviously do. I'm trying to understand whether the timing mismatch itself ever becomes a real growth constraint.",
+        "created_at": "2026-02-25T17:10:39.752403",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/JackStrawWitchita/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 12,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Discussion%22",
+        "https://www.thepromptengine.app/blog/concrete-and-steel"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [
+        "Mistral"
+      ],
+      "mentioned_models": [
+        "Mistral",
+        "Phi-4",
+        "Qwen 3.5",
+        "Claude Opus 4.6"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:10:39.752403"
+  },
+  {
+    "post_id": "1pjrihu",
+    "subreddit": "GeminiAI",
+    "url": "https://www.reddit.com/r/GeminiAI/comments/1pjrihu/this_is_spot_on",
+    "permalink": "https://www.reddit.com/r/GeminiAI/comments/1pjrihu/this_is_spot_on",
+    "author": "this_is_spot_on",
+    "title": "This is spot on",
+    "body": "Help/question \n \n \n ankursethi.com Open \nThe process for obtaining an api key for working with Gemini cli is bonkers. There must be a way to simplify this? \nNo loading dock? No problem. This 22,000-lb steel yard ramp lets forklifts load and unload trucks, trailers, and railcars from ground level. Ships fully assembled, adjusts from 42\"-62\", and is built for demanding warehouse and yard operations. See it in action.\ndiscountramps.com",
+    "created_at": "2025-11-27T17:10:41.253336",
+    "time_window": "W2",
+    "topics": [],
+    "comments": [
+      {
+        "comment_id": "ntfzfm2",
+        "post_id": "1pjrihu",
+        "parent_id": "1pjrihu",
+        "author": "Sure_Cockroach4218",
+        "body": "Yeah the whole Google API setup is unnecessarily complicated, they make you jump through like 5 different hoops just to get a simple key. Other providers have it down to like 2 clicks max",
+        "created_at": "2025-11-27T17:10:41.253336",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/mskogly/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Google"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "nu6388p",
+        "post_id": "1pjrihu",
+        "parent_id": "ntfzfm2",
+        "author": "mskogly",
+        "body": "The worst is that the correct documentation is impossible to find. There a numerous versions, none of which are correct. Even the internal Gemini cloud ai gives invalid instructions.",
+        "created_at": "2025-12-27T17:10:41.253336",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Gemini"
+          ]
+        }
+      }
+    ],
+    "comment_count": 2,
+    "extracted": {
+      "urls": [
+        "https://ankursethi.com/blog/gemini-api-key-frustration/",
+        "https://www.reddit.com/r/GeminiAI/?f=flair_name%3A%22Help%2Fquestion%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [
+        "GeminiAI"
+      ],
+      "mentioned_companies": [],
+      "mentioned_models": [
+        "Gemini"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:10:41.253336"
+  }
+]

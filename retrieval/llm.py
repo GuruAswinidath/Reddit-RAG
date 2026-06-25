@@ -110,7 +110,7 @@ class GeminiLLM(LLMModel):
             api_key=os.getenv("GOOGLE_API_KEY")
         )
         self._model = genai.GenerativeModel(
-            "gemini-2.0-flash"
+            "gemini-2.5-flash"
         )
 
     def generate(

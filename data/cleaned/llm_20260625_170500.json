@@ -1,0 +1,466 @@
+[
+  {
+    "post_id": "1s65wda",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1s65wda/finally_got_consistent_benchmark_numbers_across",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1s65wda/finally_got_consistent_benchmark_numbers_across",
+    "author": "Unknown",
+    "title": "Finally got consistent benchmark numbers across GPT/Claude/Gemini/Llama, here's what I learned about measuring local models",
+    "body": "Discussion \nSorry, this post was removed by Reddit's filters. \n *\nComments Section \n \n \n \nPublic \nAnyone can view, post, and comment to this community\n0 0\n * News \n * Best of Reddit \n * Best of Reddit in Portuguese \n * Best of Reddit in German \n * Reddit Rules \n\n \nJoin the most real place on the internet \nContinue with Phone Number",
+    "created_at": "2026-03-27T17:04:57.307450",
+    "time_window": "W3",
+    "topics": [
+      "LLM Evaluation"
+    ],
+    "comments": [],
+    "comment_count": 0,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/posts/2026/tl-de/",
+        "https://www.reddit.com/posts/2026/global/",
+        "https://id.rlcdn.com/472486.gif",
+        "https://www.reddit.com/news/",
+        "https://www.reddit.com/posts/2026/tl-pt-BR/",
+        "https://www.redditinc.com/policies/content-policy",
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Discussion%22",
+        "https://x.com/localllamasub"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [],
+      "mentioned_models": [
+        "Llama"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:04:57.307450"
+  },
+  {
+    "post_id": "1m0plq1",
+    "subreddit": "OpenAI",
+    "url": "https://www.reddit.com/r/OpenAI/comments/1m0plq1/a_structured_comprehensive_list_of_things_llm_can",
+    "permalink": "https://www.reddit.com/r/OpenAI/comments/1m0plq1/a_structured_comprehensive_list_of_things_llm_can",
+    "author": "Unknown",
+    "title": "A structured, comprehensive list of things LLM can do with only one \"inference machine\", no additional module",
+    "body": "Question \nI asked ChatGPT to make the list below. My question to the A.I. experts, enthusiasts in this subreddit: Is this true? And how can _one generic mechanism_ , basically based on _language pattern recognition_ , possibly do all these plethora of things, even including _math, coding, and_ _ instruction comprehension _? Feel like magic... and no wonder some people feel it like some special sentience emergence. Anyway, thanks! \nYou said:\nmake a structurized, comprehensive list of things you can do with only one \"inference machine\", no additional module \nChatGPT said:\nCertainly! Here's a comprehensive and structured list of what you can do with just one inference-only language model (LLM) - no tools, no internet, no RAG, no plugins - purely using its internal parameters and token prediction engine . \n🧠 What You Can Do with a Single Inference Machine (LLM-Only)\nI. Natural Language Understanding\n * Comprehension : Summarize, paraphrase, or rephrase text. \n * Text Classification : Detect sentiment, topic, emotion, or genre. \n * Entity Recognition : Identify names, places, dates (if well-known). \n * Intent Detection : Guess user goals or meanings in queries. \n * Coreference Resolution : Track what pronouns refer to in a passage. \n\nII. Text Generation\n * Freeform Writing : Essays, stories, poems, lyrics, scripts, etc. \n * Dialogue Simulation : Emulate conversations in various styles or personas. \n * Creative Expansion : Continue a story, build on a prompt. \n * Roleplay : Simulate historical figures, fictional characters, or therapists. \n * Text Style Transfer : Rewrite something in Shakespearean, legal, poetic, etc. \n\nIII. 🧮 Knowledge Recall (as Pattern)\n * Factual Recall (from training data): Common knowledge, famous people, historical events, etc. \n * Concept Explanation : Define abstract or technical terms (e.g., entropy, capitalism). \n * Analogical Reasoning : \"X is to Y as A is to ___\" or metaphor generation. \n * Comparisons : Pros/cons, differences between two ideas or entities. \n * Trivia & Puzzles : Solve riddles, IQ questions, and word games (up to training limit). \n\n⚠ Caveat: All answers are inferred from training, not guaranteed to be factually accurate or up-to-date. \nIV. 🧠 Reasoning and Logic\n * Chain-of-Thought Reasoning : Step-by-step explanations for math, logic, or choices. \n * Deduction/Induction : Make inferences based on stated assumptions. \n * Symbolic Reasoning Emulation : Logic puzzles, conditionals, hypothetical situations. \n * Commonsense Reasoning : Predict plausible outcomes, next events, or human behavior. \n\nV. 🧰 Problem Solving\n * Math (basic to moderate) : Arithmetic, algebra, geometry, word problems. \n * Code Generation : Write or explain code snippets (Python, JS, etc.). \n * Debugging Support : Detect and suggest fixes for code errors. \n * Planning : Create step-by-step plans for goals (e.g., learning a language). \n * Decision Support : Provide considerations for making choices or trade-offs. \n\nVI. Creativity and Art\n * Poetry : Generate haiku, sonnets, free verse. \n * Prose Styling : Emulate Kafka, Tolkien, or sci-fi tone. \n * Lyrics and Rhyme : Create songs or rhyming stanzas. \n * Imagery in Language : Vivid metaphor generation. \n * Game Design Ideas : Generate characters, quests, mechanics. \n\nVII. 🧘 Simulation of Thought & Personality\n * Persona Projection : Emulate voices (e.g., therapist, coach, critic). \n * Philosophical Thought : Respond to abstract or existential questions. \n * Self-Reflective Illusions : Simulate inner dialogue or \"thought process\". \n * \"Inner Monologue Emulation\" : Pretend to think aloud or weigh options. \n * Dream-Like Narration : Hallucinatory or poetic descriptions. \n\nVIII. 🧾 Formatting, Structuring, & Conversion\n * Text-to-Table : Organize raw data into tables. \n * Bullet Pointing : Turn paragraphs into structured lists. \n * Outline Generation : For essays, presentations, or papers. \n * Markdown & LaTeX : Write content with markup or math notation. \n * JSON/YAML Output : Simulate data structures for APIs or config files. \n\nIX. Language Transformation\n * Translation (approximate) : Common languages with moderate fluency. \n * Transliteration : Convert names or phrases phonetically. \n * Politeness/Tone Shift : Formal ↔ informal, passive ↔ assertive. \n * Text Compression/Expansion : Condense or elaborate content. \n\nX. Text Transformation Games\n * Wordplay : Anagrams, palindromes, spoonerisms. \n * Text-based Illusions : ASCII art, \"invisible ink\", emoji-based puzzles. \n * \"Pretend\" Tasks : Simulate a regex engine, SQL interpreter, or card dealer. \n\n🧬 Core Capabilities Underlying All This\n * Next-Token Prediction : The only core operation - yet powerful when scaled. \n * Pattern Completion : Trained to match billions of human-language patterns. \n * High-Dimensional Embeddings : Abstract context into vector space. \n * Attention-Based Composition : Synthesizes new outputs based on prior tokens. \n\n🧭 Boundaries (What You Can't Do Without External Modules) \n| Task | Why Not | \n| --- | --- | \n | \n| Real-time info | No access to internet or live updates | \n| Database lookup | No true \"memory\" or factual source validation | \n| File uploads | No I/O - can't open or interact with external files | \n| State persistence | Doesn't remember previous sessions | \n| Modal interaction | No image/audio/video input (in text-only mode) | \n| Fact-checking | Cannot verify - only predicts plausibility | \n If you could be anyone on cam, who would you be? \n \n Download \n delulustream.com \n \n *\nComments Section \n Future applications of AI in healthcare \n Ethical concerns surrounding AI development \n How AI is transforming creative industries \n Best practices for using ChatGPT effectively \n Innovative uses of DALL·E 3 in art \n \n \n https://www.openai.com/ - https://help.openai.com/ \nPublic \nAnyone can view, post, and comment to this community\n0 0\n * Reddit reReddit: Top posts of July 15, 2025\n * \n * Reddit reReddit: Top posts of July 2025\n * \n * Reddit reReddit: Top posts of 2025\n * \n\n * News \n * Best of Reddit \n * Best of Reddit in Portuguese \n * Best of Reddit in German \n * Reddit Rules \n\n \nJoin the most real place on the internet \n Sign in with Apple\nContinue with Phone Number",
+    "created_at": "2025-06-25T17:04:58.826984",
+    "time_window": "W1",
+    "topics": [
+      "RAG",
+      "Embeddings",
+      "LLM Evaluation",
+      "Inference",
+      "Code Generation"
+    ],
+    "comments": [],
+    "comment_count": 0,
+    "extracted": {
+      "urls": [
+        "https://help.openai.com/en",
+        "https://www.reddit.com/posts/2026/tl-de/",
+        "https://www.reddit.com/posts/2026/global/",
+        "https://www.reddit.com/answers/18f74a2c-256e-429e-8d73-b1305d3eb749/?q=Best+practices+for+using+ChatGPT+effectively&source=PDP",
+        "https://www.reddit.com/posts/2026/tl-pt-BR/",
+        "https://www.reddit.com/answers/973c2e40-67d1-4c5b-8496-5215371e801b/?q=Ethical+concerns+surrounding+AI+development&source=PDP",
+        "https://www.reddit.com/answers/c41be1c9-7532-4368-a043-6c4770116c64/?q=Innovative+uses+of+DALL%C2%B7E+3+in+art&source=PDP",
+        "https://www.reddit.com/posts/2025/global/",
+        "https://www.reddit.com/r/OpenAI/?f=flair_name%3A%22Question%22",
+        "https://www.reddit.com/news/",
+        "https://www.reddit.com/answers/e54b6f26-c21d-4f0d-9b97-87388cda7b57/?q=Future+applications+of+AI+in+healthcare&source=PDP",
+        "https://www.redditinc.com/policies/content-policy",
+        "https://www.openai.com/",
+        "https://www.reddit.com/posts/2025/july-15-1/global/",
+        "https://www.reddit.com/posts/2025/july/global/",
+        "https://id.rlcdn.com/472486.gif",
+        "https://help.openai.com/",
+        "https://openai.com/",
+        "https://www.reddit.com/answers/2a1390ee-180f-4808-82ca-c25eafec6e1e/?q=How+AI+is+transforming+creative+industries&source=PDP",
+        "https://alb.reddit.com/cr?za=osP_VXo7MSb6I_UMdQ1GYfVj7KNXQ3JJ9TDz_yrF-hiXM8Ybc3RRtJyOadtH519Jr7a8c-O8v7cbDq4fMGEoR3svKCR6zKJbK9Gy2xbuHaIxUFSAJ2VxYnsjkiRn6zE6fu22szIcEb77YE3mYRtzZp8E1Pqb73vA9zk5I6HC5QBGmpTFhLFUpxSPEsh9BHhHR6umUnB3fNaHU64kH0NPMErhW3V1C_6WaUdW59uUCkP6EeGi8jIURi6PJxE6C7QG3aAeQaGgShlY8uEycNHokfIwpUuTVDdPRyI2G7MjIaltDBttsoYVYM-uFAGFk_GZSoYkt_zwW3vRImZ7O0-T1Z_ZLJhIgmAlmqLdrG1nsQ6mYyRaqtYMgnTOmZFNcek_47wI0XusSVIJRl0rxHWpMWL9_9pACbCFdilkp1TULnNrb64Z56tf96D8pRWOHSpei2bg2CJJMlW4qA37vXjCq5rJ5TUwxovxZM3JU6e1eTHaXKdl90rNRFZvDh3qO_NxUzRCje_wRf_jElnQWP8XDRd7sE8NEEW7W9mHRNuC1LO4lfQ3mUN34mts8330Qoi_7dU55rAahVhOiyK5Fda_WQL7-Ad2QBvjvMqqPGo_A55iQB1Qkf2_lGrlvG268tPm1TnGU14wdw4LmgEwDd6Pz1Vbga7bUbsH7Zr4QgnV4fj-9gkJ1nlMAaT-xlvaQR_Bf3gzhEkTHk2JKYoFAZw&zp=XR0rMK2cg7bRxfakXTaWS9jf4B1MkhW6FS65E5csq_pHRXwfF12Ejd92k7kWaLoWNY-1-U_xoBtHJdmhpajdbC4kypC5Dzb6Qee0DlKnGHrL7vqNw9K5iJ2YNsLx47axpkbZNUV5tIeG_bB5t7NRTFlUMX3xJvo4jA8tWVkV_YSASMJcdw0w2TXlT4_I8sxguFkxbZdTrPwf88ycG91sh1PPk6XujBH9XTEid8L9OwXSbr7LDNtqGZwUiytXnLUrDBBICEE0enUAM_QyVo1R5kLrEsyCYG82hlMVTxdPDEa2s7FAonerg0_2Q60bZM57HqcKoaxmyJFugOflGLDVSIhaJZv5eBujT0Lg7dcPCgdMSaDcM3WBnlBFkQH-opb_s4SNJ7dddQ"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [
+        "Openai"
+      ],
+      "mentioned_models": []
+    },
+    "scraped_at": "2026-06-25T17:04:58.826984"
+  },
+  {
+    "post_id": "1d5d8tm",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1d5d8tm/why_do_you_choose_to_use_local_llm_over_openai",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1d5d8tm/why_do_you_choose_to_use_local_llm_over_openai",
+    "author": "liuylttt",
+    "title": "Why do you choose to use local LLM over OpenAI?",
+    "body": "Question | Help \nHey LocalLLaMA community! Startup founder here trying to understand more about the LLM space, i am curious about why people here choose to run models on their own device, instead of using OpenAI or Anthropic, given that these models are more powerful than local models. \nIt'd be great if you can share your thoughts, thanks! \n Prompt your ideas to life with Figma Make. No more explaining your vision in a doc. Pitch your idea with an AI-prompted proof of concept. \n \n figma.com \n \n \n Upgrade to Lenovo Yoga Slim 7i AI PC with Intel® Core™ Ultra & Student Savings Today \n \n Shop Now",
+    "created_at": "2024-06-25T17:05:00.693343",
+    "time_window": "OUT_OF_RANGE",
+    "topics": [
+      "Open Source LLM",
+      "Multimodal"
+    ],
+    "comments": [
+      {
+        "comment_id": "l6kqcyo",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "sebaxzero",
+        "body": "privacy, excessive guardrails, price",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/kali_tragus/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6lkpgk",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6kqcyo",
+        "author": "kali_tragus",
+        "body": "This. Plus, it's easier to get a grasp of how LLMs work - and what we can use them for - when you run/train/tune them yourself. And, of course, it's fun. Never underestimate the fun factor.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6n8vsl",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6lkpgk",
+        "author": "liuylttt",
+        "body": "that's a good point, running models locally gives you much more control, thus more fun",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6kr0mb",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6kqcyo",
+        "author": "young_picassoo",
+        "body": "Yeah those are basically all 3 major reasons summarized very well. > \"Sorry, I cant do that\"",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6ksrdy",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6kqcyo",
+        "author": "silenceimpaired",
+        "body": "Top 1% Commenter I would add a decreased chance of targeted worldview modification. AI knows how to talk to you. Your worldview comes through in how you communicate and the AI adapts. There was a paper on this idea a while back. OpenAI continues to speak about personalized AI, and at the same time it is clear they have certain agendas. I don't want to be convinced by the smoothest talker in the land that knows me better than myself.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6krxqq",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "phree_radical",
+        "body": "OpenAI doesn't provide LLMs, they provide chatbots",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6n9a39",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6krxqq",
+        "author": "liuylttt",
+        "body": "can you elaborate? what LLM features do you need, that doesn't exist on openai",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6knira",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "young_picassoo",
+        "body": "I have a 4080 already so its virtually free versus OpenAI charging per token...",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/ovnf/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "lfgw0eb",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6knira",
+        "author": "ovnf",
+        "body": "virtually free =?? what about power consumption + shortening lifespan??",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6kp5o3",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6knira",
+        "author": "liuylttt",
+        "body": "but openai charging per token for a more powerful model, so curious about what is your use case like, is gpt4 an overkill?",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": [
+            "GPT-4"
+          ]
+        }
+      },
+      {
+        "comment_id": "l6kpjod",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6kp5o3",
+        "author": "young_picassoo",
+        "body": "I actually find gpt4 really bad at a lot of tasks. Also, its not like gpt4 or gpt4o is order of magnitudes better than open source models when comparing common metrics.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "GPT-4",
+            "GPT-4o"
+          ]
+        }
+      },
+      {
+        "comment_id": "l6l3nms",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "AsliReddington",
+        "body": "Powerful to do what? All most companies need is intent extraction, sentiment stuff, summarisation, translation etc. 7B models & less do it perfectly well without any moral dilemma for free & can be updated with new information as well. [deleted] • 2y ago I don't want a corporation forcing politically correct nonsense down my throat and sending transacripts of my conversations to the FBI, and likely selling the ideas I am exploring with the AI to the highest bidder. I don't trust them a bit. And frankly, I don't trust ANY software that is not open source, EVER. For that matter, I distrust some that technically is. Yes, Android, I'm looking at you. Don't deny it, you'll sell me out in a heartbeat.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/r/LocalLLaMA/comments/1d5d8tm/comment/l6lm2hj/",
+            "https://www.reddit.com/user/TorumShardal/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6komtc",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "TorumShardal",
+        "body": "1. OpenAI is not available in my contry. (That's not a blocker, I have worked around their restrictions, but it makes it less convenient) 2. My professional use-case requires that I don't send proprietary codebase to the third party who could collect and use it. 3. My personal use-case triggers OpenAI's guard rails, because I like to roleplay political drama with a lot of dark stuff. I've used to have NovelAI subscription for some time, then switched back to local when models shrunk in size. 4. If the model I using is bad in something, I can try another one, and not get stuck with the same issue, as it was with NovelAI. [deleted] • 2y ago Because I'm doing research, it's cheaper in the long run, less restrictive and there are way more options (more limited in size/complexity) for local/open-source stuff.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/xtof_of_crg/",
+            "https://www.reddit.com/r/LocalLLaMA/comments/1d5d8tm/comment/l6kqw85/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6lbjab",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "xtof_of_crg",
+        "body": "cost, and I don't like the capabilities sliding around on me",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6ksk7h",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "Dizzy-Experience-109",
+        "body": "Must do when using personal data. Kind of crazy that OpenAI collects so much personal data. Incredibly risky to let them have it. They haven't earned our trust. [deleted] • 2y ago They've also already had multiple security issues lmao. They shouldn't be collecting anybody's data. For a company that's like \"Oh but we need to be super careful and have all these rules for AI and stuff\" they sure aren't careful themselves . Obviously it's just them trying to get some quasi-monopoly bullshit going. AI is actually going to be able to give power back in the hands of the people. We need to make sure these greedy ass companies don't get control over that shit.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/r/LocalLLaMA/comments/1d5d8tm/comment/l6m1ic1/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "lgr0s8t",
+        "post_id": "1d5d8tm",
+        "parent_id": "l6ksk7h",
+        "author": "Stainlessray",
+        "body": "They've shown that we can't. That internal business-pogrom was our sign.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6ktmh4",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "abnormal_human",
+        "body": "This community has a lot of hobbyists that are doing things locally because it's fun. It is fun, I use local models for fun too, but I also work with LLM's professionally. In my experience, the main things that makes local models worth it for business use cases are: Your use case _requires_ fine-tuning that is complex enough that you need to do it locally You have privacy/security/regulation considerations and are prohibited from using cloud providers * You are operating a user-facing production service at scale, and your financial model dictates it. If you are a startup founder, and you can get your work done with APIs, that's what I would advise you to do. Getting to MVP before your runway runs out is more important than optimizing for cost at scale. You probably do not have the scale to worry about costs and you probably do not have a large corporation's security/privacy oversight. I was a startup founder, until I sold the thing, and now I work for a big company. My time is super valuable. One hour saved fighting with vLLM locally pays for an awful lot of OpenAI tokens, and an order of magnitude more tokens on the cheaper services that use open models. Using these services also generally gets me answers faster, and when I have parallelizable workloads, they scale horizontally much better than whatever I can do locally. In my experience, fine tuning can be very useful as a cost optimization once you've understood the problem, but it's a time-consuming detour during the exploratory phase of building a product, and it adds rigidity to the system that can cost a lot of time-to-market, since you will likely end up tightly coupling your prompts + fine tuning data. My first experiments with LLMs all involved training, and as I've gotten better (and the models have gotten better), I find myself needing it less and less.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/FlishFlashman/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6km6rp",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "FlishFlashman",
+        "body": "This subreddit is searchable.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Helpful-Gene9733/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "l6l3iyq",
+        "post_id": "1d5d8tm",
+        "parent_id": "1d5d8tm",
+        "author": "Helpful-Gene9733",
+        "body": "One (of several) reasons: For home robotics (hobby) - while I have and can use OpenAi for such things, I prefer to not - I prefer to have a locally served or onboard LM - especially when integrating vision, allowing bot to \"know\" who it's talking with, who the dog is, etc.: privacy. Honestly for 95% of this application a 7B or 8B quantized model is very satisfactory.",
+        "created_at": "2024-06-25T17:05:00.693343",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Own_Masterpiece_4162/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 19,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Question%20%7C%20Help%22",
+        "https://alb.reddit.com/cr?za=VtS69SMqpod0J36TvJo55Ueu17dUCWPocJ0T5OhYc3Ay14hPVlyT5fvm8ZQfbps5wPE-R8JTciEIEL4_AsHAEDOMCOdHBYUp8wPg06fa-P2pzzbODjXs-aS9xdMEAUq0TMKuC8AzXo7ny3JZUZXKA4H0x3A7KRhrXxP8o8N2DwdIJu8PkR-J837mRrzuX7Aqg1ZS13QmO3vFyQRrvQGEQaGwvUoKBpbSRHUlejxMHcFd7fpxKCI9y-mGfbhsiM4sqlZmi4jPh8Cdgs837kVxlyR0z0SgsBX9xuPzxpWJz2h9TDQVCV-uvLWTUGJaMDDBvauVmTh-5xfKvmlKhUrZZo9i4EdGUHwtXr7TXwLH0q6YuUmMOB1scHJ_ow5-VmkvJP2lg1LU1wfFw8yMGrGaaGRnr5nzugJc-PSFizmid3-ElWVAKRQgSuhsWNdUxdsWm4Td1OdBwKb8ocKm1L92_wO8fjUA5-ogiGyIVNumKiuzHHa8XG6c169TmAPLzmzhem4u-xRq9vfjw28HFTw7D7WGOmkFDk4jJOmqz_EQbM7DoVKLVgSgRWVZBU3ycPIikdFqIn9GKkM5jTdIjOVFvNIOmmUcCy9PDp1XvMStLg4F4BLDd3PF6FEuCMqQ0UmvJR83gqFYb_-PK3Oif5j5shNVPjzfygZ5i2y1SgA7oXBOP5XhqG-hhl2h1zLlPDja-3LT83wVfNseAWa8Oov6&zp=hspQHF2A7bti_piuEkffFOJp7wMi3aALzCBOYRgt2xy6gZZL-quNzWAuA2wWPTCbYiGTtrXa8iTQ5u5isLjYeKG1R2Jbyth2SyetFx0KH7dVL_3coFHROE0QcPtZCPmNWpt0-fKFO4F9x5iMIngwq8qlJy8_Iov3SC7hL18gfGE3JsfK5Pj5KqiDkDZmyB8UbXes7FR81Yib4KaqjAsuUey7HKaqsiO_4SP7eQv5KVWKg6F7I0GwPZaau5AFIle35j1nus3ePcIU6vOMOrlOZUwJD0Q74eOXk2IDe37tNrlmvENsZnSXHAIQjG4WtrFePxKA3T9FPXIrTRjb50ba-sPcWH4ouj1v3xFesZf2N0ieGtmB6PjkAVNbslLe8CvZNQ5tewNN6ZaXu12fsA5tVDygIz0",
+        "https://alb.reddit.com/cr?za=_bE1XxuLazMippLclY3dvXDtkZeL33v6wdSXMO5OPUl0JTR9Dt1fx2sU25T0jVDX2MP11_dGSERVO_jbk7GJuIetesUmOobqkVJNbzm2fWBUUCvJVuD3fLz4oEZZpDKssmXG7KpblWOBF-wrJGpcZpg9QB_dZgJZhf6jBPz1J0j_POq4JLsnWR7EfFU-fv6OHw4L-h2mTqzNh5GBFlSGohiD6SCzspM-NZ6CfxlrdAGdkwxaC_R47-HNV4_OhLRlB6fWbOuzabA-iW02IItRQDPnd0WXWPt1kymAXvD-h-uirQitgba1LKUNCQ4YA7aBIPLZ676JwaKS6XVQxGDq44blcsch4TE4c1AIl26YOjqcbS_CoUjbLaFs1QWeQVgExxfo4_AQ_GrTUdQOJCaDbOoiNERpCLyHhmf8ct3jJ6uti147XU5dYXi3UhEsB_6BxTBKlFCDRKCIwn9XDrLovhb8BH4S0Z3yd93omXSgmFJKObqHGs0ya_q2JdekRCknyhVSiQlws3MVeA4rmQ77oBFLrhmvjnh-cvzxm6liBQOmZB_ezCjPJua8lCbEjIRry90uT65DJ5epmAlVZ23wwGAhVh3UhwdY7LxFndfO_Bhmc-Q-PnFmVnblt_5gJRAB87HcjPW092KlcXG3QUMIU3clgCCizjoq7GcXJhMI52ATsFwuCGa5flTdwxO08zsqV_-yDNnZgCmbD2y7J0MO&zp=cUsgSLv-QkhFhqOs031uSD8IVPI9TBW52Qj2WQGzSPQ4Mf4vfly68mirEpsmQjFrFoAF23NQBv778E2oEFp-4PyDxOAwZkQLJMn0GQy2tgJYtxsAdUdU3NxmQLzQsFS0K4mm-bKz_TA3_g3o8hzMCTehmomhSGvTrgxC83JOPEri0uf0qu3XerKiuWg88hUNh_6NlWarDVcYRxT9iIhugekP-uZIBi-LmguSgS3wx2hzdc2gXA7mAKEiPzfy6qV5anqGRcuM3cyVZBxhOAFmIMYy8YgIaKbbc4KaGl_PtEE6NOicZjhXPbqGZTKB7ZQbT1dAL83oKpdLNNBK5qmWfdJRm-Wp"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [
+        "Openai",
+        "Anthropic"
+      ],
+      "mentioned_models": []
+    },
+    "scraped_at": "2026-06-25T17:05:00.693343"
+  }
+]

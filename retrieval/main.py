@@ -7,7 +7,7 @@ from retrieval.retriever import Retriever, METHODS
 def main():
     llm_name = "deepseek"
     embed_name = "sentence-transformer"
-    method = "vector"
+    method = "tfidf"
 
     for arg in sys.argv:
         if arg.startswith("--llm="):

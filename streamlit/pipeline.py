@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 import streamlit as st
 
-from ingestion.search import search_reddit_urls, TARGET_SUBREDDITS
+from ingestion.search import search_reddit_urls, search_all_topics, TARGET_SUBREDDITS
 from ingestion.scraper import RedditScraper
 from ingestion.parser import RedditParser
 from preprocessing.cleaner import clean_post
@@ -67,7 +67,7 @@ with st.sidebar:
     st.markdown(f"{'✅' if cleaned else '⬜'} **3. Clean**")
     st.markdown(f"{'✅' if normalized else '⬜'} **4. Normalize**")
     st.markdown(f"⬜ **5. Push to Vector DB**")
-    st.markdown(f"🔒 **6. Push to Neo4j** _(coming soon)_")
+    st.markdown(f"⬜ **6. Push to Neo4j**")
 
     st.divider()
 
@@ -95,26 +95,29 @@ col1, col2 = st.columns(2)
 
 with col1:
     topic = st.text_input(
-        "Search Topic",
+        "Search Topics (comma-separated)",
         placeholder="e.g. RAG, Agentic AI, Claude",
     )
 
 with col2:
-    num_posts = st.number_input(
-        "Number of posts to pull",
-        min_value=5, max_value=10000, value=20, step=5,
+    year_filter = st.selectbox(
+        "Year filter",
+        options=[
+            None, 2026, 2025, 2024, 2023,
+        ],
+        index=0,
+        format_func=lambda y: (
+            "All years" if y is None
+            else str(y)
+        ),
+        help="Filter Reddit API results to "
+             "posts from this year only. "
+             "'All years' fetches everything.",
     )
-
-engine = st.radio(
-    "Search Engine",
-    options=["tavily", "google_cse"],
-    index=0,
-    horizontal=True,
-)
 
 restrict_subs = st.checkbox(
     f"Restrict to target subreddits ({', '.join(TARGET_SUBREDDITS)})",
-    value=True,
+    value=False,
 )
 
 if st.button("🔍 Pull Data", type="primary", disabled=not topic):
@@ -125,23 +128,36 @@ if st.button("🔍 Pull Data", type="primary", disabled=not topic):
     st.session_state.normalized_comments = None
     st.session_state.pipeline_log = []
 
+    topics = [
+        t.strip() for t in topic.split(",")
+        if t.strip()
+    ]
+
     with st.status("Pulling data from Reddit...", expanded=True) as status:
 
         # Search
-        st.write("Searching for Reddit URLs...")
-        log(f"Searching: {topic} (engine={engine}, limit={num_posts})")
+        st.write(
+            f"Searching {len(topics)} topics "
+            f"(with time variants)..."
+        )
+        for t in topics:
+            st.write(f"  - {t}")
+        log(
+            f"Searching: {topics} "
+            f"(limit={num_posts}/topic)"
+        )
 
         loop = asyncio.new_event_loop()
         results = loop.run_until_complete(
-            search_reddit_urls(
-                query=topic,
-                num_results=num_posts,
-                engine=engine,
+            search_all_topics(
+                topics=topics,
                 restrict_subreddits=restrict_subs,
+                use_time_variants=True,
+                year_filter=year_filter,
             )
         )
         log(f"Found {len(results)} URLs")
-        st.write(f"Found **{len(results)}** Reddit URLs")
+        st.write(f"Found **{len(results)}** unique Reddit URLs")
 
         if not results:
             status.update(label="No URLs found. Try a different topic.", state="error")
@@ -156,7 +172,8 @@ if st.button("🔍 Pull Data", type="primary", disabled=not topic):
                 scraper.scrape_urls(urls, search_metadata=results)
             )
 
-            raw_file = scraper.save_results(topic, scraped)
+            slug = "_".join(topics[:3])[:40]
+            raw_file = scraper.save_results(slug, scraped)
             log(f"Saved raw data to {raw_file}")
 
             # Parse
@@ -318,13 +335,90 @@ if st.button(
 
 st.divider()
 
-# ── Step 4: Push to Neo4j (disabled) ─────────
+# ── Step 4: Push to Neo4j ───────────────────
 
-st.header("4. Push to Neo4j")
+st.header("4. Push to Neo4j Knowledge Graph")
 
-st.button(
-    "🔒 Push to Neo4j (Coming Soon)",
-    disabled=True,
-    use_container_width=True,
+can_push_neo4j = st.session_state.normalized_posts is not None
+
+col_neo1, col_neo2 = st.columns(2)
+
+with col_neo1:
+    clear_graph = st.checkbox(
+        "Clear existing graph first",
+        value=False,
+    )
+
+if st.button(
+    "🕸️ Push to Neo4j",
+    type="primary",
+    disabled=not can_push_neo4j,
+):
+    import os as _os
+    from dotenv import load_dotenv as _ld
+    _ld()
+
+    neo_uri = _os.getenv("NEO4J_URI")
+    neo_user = _os.getenv("NEO4J_USER")
+    neo_pw = _os.getenv("NEO4J_PASSWORD")
+
+    if not neo_uri or not neo_user or not neo_pw:
+        st.error(
+            "Missing NEO4J_URI, NEO4J_USER, "
+            "or NEO4J_PASSWORD in .env"
+        )
+    else:
+        from knowledge_graph.builder import (
+            GraphBuilder,
+        )
+
+        with st.status(
+            "Building knowledge graph...",
+            expanded=True,
+        ) as status:
+            st.write(
+                f"Connecting to Neo4j at "
+                f"{neo_uri}..."
+            )
+            log(f"Neo4j: connecting to {neo_uri}")
+
+            builder = GraphBuilder(
+                neo_uri, neo_user, neo_pw
+            )
+
+            try:
+                if clear_graph:
+                    st.write(
+                        "Clearing existing graph..."
+                    )
+                    log("Clearing graph...")
+                    builder.clear()
+
+                st.write(
+                    "Loading data + computing "
+                    "sentiment..."
+                )
+                log("Building knowledge graph...")
+
+                builder.build()
+
+                log("Knowledge graph built")
+                status.update(
+                    label="Knowledge graph built",
+                    state="complete",
+                )
+            except Exception as e:
+                log(f"Neo4j error: {e}")
+                status.update(
+                    label=f"Error: {e}",
+                    state="error",
+                )
+            finally:
+                builder.close()
+
+st.caption(
+    "Creates 8 node types (User, Subreddit, "
+    "Post, Comment, Topic, Company, Model, "
+    "TimePeriod) and 7 relationship types with "
+    "VADER sentiment scores."
 )
-st.caption("Neo4j graph database integration is not yet implemented.")

@@ -1,0 +1,71 @@
+[
+  {
+    "post_id": "1tuqo9y",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tuqo9y/automating_openaiprivacyfilter_or_any_redaction",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1tuqo9y/automating_openaiprivacyfilter_or_any_redaction",
+    "author": "sn2006gy",
+    "title": "Automating openai-privacy-filter or any redaction tools?",
+    "body": "Question | Help \n24GB Mac. Tried Osaurus, but it doesn't seem to actually enable every time for some reason, so I don't trust it. \nI've also tried asking various local models to do it directly for me, but those can't seem to catch English names reliably unless I specify them manually, and by then I might as well do it myself. I've only tried the Apple Foundation Model and LFM2.5 1.2B Thinking MLX 8bit so far though. \nAny recommendations? \nGemini suggested Microsoft Presidio, but it's picky with the python version and... the usual python shernanagans, so I've given up on fighting that for now. (pipx no, brew no, poetry hassle; I'm not a python programmer and in my experience even LLMs get confused with virtual environments like venv) \nAny suggestions? I'm a guy running a 1 man band business who needs help processing customer data, not a multinational corporation. This could be someone's vibecoding project if there's a way to test it carefully first before use? \nJust as a reminder, watch out for malicious counterfeit models if using HuggingFace. \n Need a quick proof of concept? We've got you. \n \n figma.com",
+    "created_at": "2026-06-02T16:48:13.504658",
+    "time_window": "W3",
+    "topics": [],
+    "comments": [
+      {
+        "comment_id": "opbukmc",
+        "post_id": "1tuqo9y",
+        "parent_id": "1tuqo9y",
+        "author": "sn2006gy",
+        "body": "Top 1% Commenter is there a reason not to run Presidio in a podman/docker container and just move on?",
+        "created_at": "2026-06-02T16:48:13.504658",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/After-Cell/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "opbvia7",
+        "post_id": "1tuqo9y",
+        "parent_id": "opbukmc",
+        "author": "After-Cell",
+        "body": "found it: thanks!",
+        "created_at": "2026-06-02T16:48:13.504658",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://hub.docker.com/r/microsoft/presidio-analyzer"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Microsoft"
+          ],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 2,
+    "extracted": {
+      "urls": [
+        "https://alb.reddit.com/cr?za=KGfQETEW5fTlnUkfItUlcJ9wnrumrhIqVKMe6xMjHMwPrmJyhlMrScZADKBOU2waHf3Qx0NmZM6A8j-fi4OU0-aK5XdnWPA0QmMkb-Z6eEw4lRYfDqm_31N2AWUlaNtC0LrfPqx-Nrqt28toLM7wFsID5SKDhKc395HbaIPxJ9bINBkgy_dHO0-HEWRngy7Ca5jFzyV0rLDt4BgeAYE-LPMPaLr3cl1AEC-NBgwwxFwi8SP-mnFMkOgO1C9AhGDcbi8SRmMil4RZQiNw1PboGqdsIGSPdtqpQ8nfv-qxyOGElaGvvLQCNMTknHhNGuT5Qgx5WHT0b-FKgfalotcwb-x5TwPqDCXF4CSMOVzsfJO-zf49ijaD9ET1C4A-pCaaebCxIxZ1xu4fm-8qJHQhpeiBbFek4VLQLkV01Bc_pNBdbCGAqS8Y7xLNXl_qePfjxLDGaMNA-Ql3I2454NNlijDKn0-1NsgxebS05SjWVAWk8MIGeXa_eVT0vKLVhh73EqPXwWJfN6ZjVEH82-KA5qN34gLdAsvzdcYtrkZHEfVc-B5iLb5wjETfAuH77GGxXt-6TIIWGAw93QR3Z-pbG4B_gyHDEToo7hqEIruiYSBDQXXa4Dm40akSkOeHO51p_EbWKKmFGkG6QVpkpUHjB5y0CqL5seZzKSOC5_5HKQZlYGgMX5CLLrcIRx1ppUZWoQ&zp=6oV70SDUptnqiPiS2UV6_q2mtF4YoQ7vt-MYSHBh8hJZ5TxZmI-hVJW3kBhci1V2_GFmWhT30qNjhnP33uru09ormqjBWGDrYGJsKTlXU4IZew6uTl5pbYOxP-4yKJ_Hr0saFP7Dv4Y9c3RnTYV0F5GK7-tb85IdsSZyidIF2-_Xnn4IGa8HlBBMX_tvJaQDhUx1uWeSQUfAc9O9A-2gTB_FPKABIwOS2RxmH6tdpgba2IDTVcSZeyL9NEPqv3nBBtNVSdJ-q9oX1ybgefaVLzHI75XFK9NdWxWZmg6ffhWQTAB70CbtnVxXxmqleJdUOjWBjg_1O7_57RSDkHsUFSBT7ydKu18ui8r60LcFP0VOIXCSm9PAdLu443TIQR3B8DQQp5auXww2PKXjy4CYIl1bdME",
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Question%20%7C%20Help%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [
+        "Microsoft",
+        "Huggingface"
+      ],
+      "mentioned_models": [
+        "Gemini"
+      ]
+    },
+    "scraped_at": "2026-06-25T16:48:13.504658"
+  }
+]

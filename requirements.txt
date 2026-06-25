@@ -1,5 +1,6 @@
 tavily-python
 crawl4ai
+requests
 python-dotenv
 chromadb
 sentence-transformers

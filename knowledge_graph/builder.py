@@ -54,7 +54,14 @@ class GraphBuilder:
         self._apply_schema()
         self._create_nodes()
         self._create_relationships()
+        self._run_algorithms()
         self.stats()
+
+    def _run_algorithms(self):
+        from knowledge_graph.algorithms import (
+            run_all,
+        )
+        run_all(self._driver)
 
     def clear(self):
         print("[!] Clearing all graph data...")
@@ -76,6 +83,8 @@ class GraphBuilder:
                 "User", "Subreddit", "Post",
                 "Comment", "Topic", "Company",
                 "Model", "TimePeriod",
+                "SentimentSnapshot",
+                "TrendSnapshot",
             ]:
                 result = s.run(
                     f"MATCH (n:{label}) "
@@ -93,6 +102,8 @@ class GraphBuilder:
                 "COMMENTS_ON", "REPLIES_TO",
                 "DISCUSSES", "MENTIONS",
                 "OCCURRED_IN",
+                "HAS_SENTIMENT", "IN_PERIOD",
+                "HAS_TREND",
             ]:
                 result = s.run(
                     f"MATCH ()-[r:{rel}]->() "

@@ -1,3 +1,7 @@
+import os
+
+from dotenv import load_dotenv
+
 from vector_store.embeddings import (
     EmbeddingModel,
 )
@@ -6,8 +10,7 @@ from preprocessing.extractor import (
     assign_time_window,
 )
 
-
-CHROMA_DIR = "./chroma_db"
+load_dotenv()
 
 POSTS_COLLECTION = "reddit_posts"
 COMMENTS_COLLECTION = "reddit_comments"
@@ -21,11 +24,26 @@ _chroma_client = None
 
 def _get_chroma_client():
     global _chroma_client
-    if _chroma_client is None:
-        import chromadb
-        _chroma_client = chromadb.PersistentClient(
-            path=CHROMA_DIR
+    if _chroma_client is not None:
+        return _chroma_client
+
+    import chromadb
+
+    api_key = os.getenv("CHROMA_API_KEY")
+    tenant = os.getenv("CHROMA_TENANT")
+    database = os.getenv("CHROMA_DATABASE")
+
+    if api_key and tenant and database:
+        _chroma_client = chromadb.CloudClient(
+            tenant=tenant,
+            database=database,
+            api_key=api_key,
         )
+    else:
+        _chroma_client = chromadb.PersistentClient(
+            path="./chroma_db"
+        )
+
     return _chroma_client
 
 

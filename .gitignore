@@ -13,7 +13,6 @@ __pycache__/
 *.pyo
 
 # Data files (large, generated — re-create via ingestion pipeline)
-data/
 data.zip
 
 # Distribution / packaging
@@ -44,3 +43,4 @@ Desktop.ini
 help.txt
 problem.txt
 chroma_db/
+*.zip

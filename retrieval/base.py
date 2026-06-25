@@ -52,6 +52,7 @@ def load_corpus() -> tuple[list[dict], list[dict]]:
                         "post_id": (
                             post.get("post_id") or ""
                         ),
+                        "title": title,
                         "subreddit": (
                             post.get("subreddit") or ""
                         ),

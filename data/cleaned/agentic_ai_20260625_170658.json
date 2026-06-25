@@ -1,0 +1,1391 @@
+[
+  {
+    "post_id": "1lynqha",
+    "subreddit": "ClaudeAI",
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1lynqha/agentic_ai",
+    "permalink": "https://www.reddit.com/r/ClaudeAI/comments/1lynqha/agentic_ai",
+    "author": "madnessone1",
+    "title": "Agentic AI",
+    "body": "Humor \n \n \nPrompt your ideas to life with Figma Make. No more explaining your vision in a doc. Pitch your idea with an AI-prompted proof of concept.\nfigma.com \n \nDrowning in distractions and endless tasks? \n* \n* \n* \n* \nhubbub.77sparx.com",
+    "created_at": "2025-06-25T17:06:46.085838",
+    "time_window": "W1",
+    "topics": [
+      "Agentic AI",
+      "Multimodal"
+    ],
+    "comments": [
+      {
+        "comment_id": "n2yjyt2",
+        "post_id": "1lynqha",
+        "parent_id": "1lynqha",
+        "author": "BrianNice23",
+        "body": "Somewhere off-screen is a VC asking why the elephant isn't juggling yet.",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Nexter92/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n2wcg0h",
+        "post_id": "1lynqha",
+        "parent_id": "1lynqha",
+        "author": "Nexter92",
+        "body": "Or simply use json output from gemini for example",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Gemini"
+          ]
+        }
+      },
+      {
+        "comment_id": "n2y0e4l",
+        "post_id": "1lynqha",
+        "parent_id": "n2wcg0h",
+        "author": "madnessone1",
+        "body": "What do you think Gemini is doing in the background?",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Gemini"
+          ]
+        }
+      },
+      {
+        "comment_id": "n2zok33",
+        "post_id": "1lynqha",
+        "parent_id": "n2y0e4l",
+        "author": "strawboard",
+        "body": "You can actually validate the json as the tokens are generated so you don't need to 'ask it nicely'. If the next token results in invalid json then you just use the next most probable token until it is.",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n316hp4",
+        "post_id": "1lynqha",
+        "parent_id": "n2y0e4l",
+        "author": "IssPutzie",
+        "body": "So confident yet so wrong",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n3e4695",
+        "post_id": "1lynqha",
+        "parent_id": "n2y0e4l",
+        "author": "Thick-Protection-458",
+        "body": "In seriousness - formal grammar. We can literally eliminate probabilities of tokens which will not fullfil baseline json grammar/grammar derived from some schema/other kind of grammar. Some open inference tools even allow you to feed custom grammars.",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n2xgozo",
+        "post_id": "1lynqha",
+        "parent_id": "n2wcg0h",
+        "author": "bigasswhitegirl",
+        "body": "OpenAI, Claude, and Grok also support this. Yet I still sometimes see people go with the \"pretty please bro'\" approach.",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Satoshi6060/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": [
+            "Claude",
+            "Grok"
+          ]
+        }
+      },
+      {
+        "comment_id": "n2xy1nl",
+        "post_id": "1lynqha",
+        "parent_id": "n2xgozo",
+        "author": "Satoshi6060",
+        "body": "Since when?",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n2x8ubv",
+        "post_id": "1lynqha",
+        "parent_id": "n2wcg0h",
+        "author": "WeedFinderGeneral",
+        "body": "My coworker built a project that relies on prompts written like \"pretty please, output this as JSON and use these fields and please don't mess up my code\" - and I'm like: \"uh, you know you can just make it use JSON instead of hoping it writes text that happens to look like JSON, right?\"",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Nexter92/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n2xfz1c",
+        "post_id": "1lynqha",
+        "parent_id": "n2x8ubv",
+        "author": "Nexter92",
+        "body": "Most underrated feature. JSON output is the goat",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/bjuls1/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n2y0wc0",
+        "post_id": "1lynqha",
+        "parent_id": "n2x8ubv",
+        "author": "bjuls1",
+        "body": "How do you make it use JSON?",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n2y9aui",
+        "post_id": "1lynqha",
+        "parent_id": "n2wcg0h",
+        "author": "CzyDePL",
+        "body": "And how is this json generated?",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n31ut5j",
+        "post_id": "1lynqha",
+        "parent_id": "n2wcg0h",
+        "author": "AsItWasnt",
+        "body": "the amount of folks that clearly don't understand the technology is staggering",
+        "created_at": "2025-06-25T17:06:46.085838",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 13,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/ClaudeAI/?f=flair_name%3A%22Humor%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [
+        "ClaudeAI"
+      ],
+      "mentioned_companies": [],
+      "mentioned_models": []
+    },
+    "scraped_at": "2026-06-25T17:06:46.085838"
+  },
+  {
+    "post_id": "1qt5fx6",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qt5fx6/agentic_ai",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1qt5fx6/agentic_ai",
+    "author": "SlowFail2433",
+    "title": "Agentic AI ?!",
+    "body": "Question | Help \nSo I have been running some models locally on my strix halo \nHowever what I need the most is not just local models but agentic stuff (mainly Cline and Goose) \nSo the problem is that I tried many models and they all suck for this task (even if they shine at others socially gpt oss and GLM-4.7-Flash) \nThen I read the cline docs and they recommend Qwen3 Coder and so does jack Dorsey (although he does that for goose ?!) \nAnd yeah it goddamn works idk how \nI struggle to get ANY model to use Goose own MCP calling convention, but Qwen 3 coder always gets it right like ALWAYS \nMeanwhile those others models don't for some reason ?! \nI am currently using the Q4 model would the Q8 be any better (although slower ?!) \nAnd what about Quantizied GLM-4.5-Air they say it could work well ?! \nAlso why is the local agentic AI space so weak and grim (Cline and Goose, my use case is for autonomous malware analysis and cloud models would cost a fortune however this, this is good but if it ever works, currently it works in a very limited sense (mainly I struggle when the model decides to List all functions in a malware sample and takes forever to prefill that huge HUGE chunk of text, tried Vulkan runtime same issue, so I am thinking of limiting those MCPs by default and also returning a call graph instead but idk if that would be enough so still testing ?!) \nHave anyone ever tried these kinds of agentic AI stuff locally in a way that actually worked ?! \nThanks",
+    "created_at": "2026-01-26T17:06:48.017317",
+    "time_window": "W3",
+    "topics": [
+      "Agentic AI"
+    ],
+    "comments": [
+      {
+        "comment_id": "o30c8q3",
+        "post_id": "1qt5fx6",
+        "parent_id": "1qt5fx6",
+        "author": "SlowFail2433",
+        "body": "You could consider a REAP of GLM Air which would allow a less small quant",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30dbwl",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30c8q3",
+        "author": "Potential_Block4598",
+        "body": "Yes I will What about Minimax M2.1 REAP Or is it only GLM-Air (which is non-thinking model btw, so I have been thinking maybe that is it ?!)",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30dujx",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30dbwl",
+        "author": "SlowFail2433",
+        "body": "If you can get Minimax working then it is a great model",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30esdi",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30c8q3",
+        "author": "Potential_Block4598",
+        "body": "I am especially surprised at why those specific models that work",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30p30p",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30c8q3",
+        "author": "Potential_Block4598",
+        "body": "I think I might be barely able to fit GLM 4.5 Q4_K_M which is around my sweet spot for quantization However for the REAP version I could get Q5 or even Q6 (I was hoping for Q8 though) Any ideas on whether that would be a bump worth the REAP (I don't know what is the trade off between quants and REAPs, I just never want to quant below 4 bits, so that is when I use the REAP versions when I hit Q3s, which doesn't seem to be the case here and the trade off this time seems different!)",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30cw6k",
+        "post_id": "1qt5fx6",
+        "parent_id": "1qt5fx6",
+        "author": "Lissanro",
+        "body": "Cline does not support native tool calls with OpenAI-compatible endpoint, this will cause issues even with models as large as K2 Thinking running at the best precision. I suggest trying Roo Code instead, it uses native tool calling by default. Of course, small models still may experience difficulties but if they are trained for agentic use case, they should work better with native tool calls.",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Openai"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30d79x",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30cw6k",
+        "author": "Potential_Block4598",
+        "body": "So by native tool calling you mean the tool is on LMStudio side right ? Interesting and thank you I will check it out",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30f9nl",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30d79x",
+        "author": "Lissanro",
+        "body": "No, by native tool calls I mean exactly that - native tool calls of the model itself. Of course, backend also should support them. I know that ik_llama.cpp and llama.cpp both support this. I do not know about any other backend, but I heard LMStudio using llama.cpp actually. You can check what tokens the models generates by running with --verbose flag (both llama.cpp and ik_llama.cpp support it). Native tool calls are basically special tokens the model was trained on for agentic tasks. Cline on the other hand uses XML pseudo-tools, which just custom XML tags and not actual tool calls.",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Llama"
+          ]
+        }
+      },
+      {
+        "comment_id": "o30dquy",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30cw6k",
+        "author": "Potential_Block4598",
+        "body": "What models do you recommend for usage with Roo Code ?",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30gpzb",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30dquy",
+        "author": "Lissanro",
+        "body": "I prefer K2.5 the Q4_X quant, since it preserves the original INT4 quality. But in your case since you have 128 GB, you need a smaller model. I know Minimax M2.1 also works quite well with Roo Code and other agentic frameworks as long as they are using native tool calls. In your case, one of the best options probably would be the REAP version of M2.1: - at Q4_K_M it is just 84.3 GB, so still leaves room for context, especially if you set Q8_0 context cache quantization (by default it uses F16 otherwise).",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://huggingface.co/mradermacher/MiniMax-M2.1-REAP-40-GGUF"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Huggingface"
+          ],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30e4qc",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30cw6k",
+        "author": "Potential_Block4598",
+        "body": "I liked about Goose that it allows coding based MCP calls (writing code that can call MCP instead of calling the MCP only as an option!) Can Roo Code do that ? (I believe this and Python directly natively are essential even for model training!)",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30eooh",
+        "post_id": "1qt5fx6",
+        "parent_id": "1qt5fx6",
+        "author": "onlinerobson",
+        "body": "The Q4 to Q8 jump does help with tool calling accuracy ime. The precision loss at Q4 shows up most in structured output like MCP calls - you get more malformed JSON and missed parameters. Q8 if your VRAM allows it. For the prefill issue with huge function lists, have you tried streaming the context in chunks rather than dumping everything at once? Some models handle incremental context better than a giant initial prompt. Alternatively, yeah, call graph + summary instead of raw function list would massively cut down prefill time.",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30o59v",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30eooh",
+        "author": "Potential_Block4598",
+        "body": "Yeah wit Q4 I got some such errors in cline never understood why but basically restored a checkpoint Thanks to the tip However it is always an issue when having to deal with very very long prompts for some MCPs that does so So I will try again later with another MCP for the same tool",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30fgw6",
+        "post_id": "1qt5fx6",
+        "parent_id": "1qt5fx6",
+        "author": "Fox-Lopsided",
+        "body": "You could maybe give nemotron 3 nano (30b-a3b) q shot I have heard good things when it comes to local Agentic AI use cases and reasoning as well as Tool calling capabilities",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30o81h",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30fgw6",
+        "author": "Potential_Block4598",
+        "body": "Yeah I will nice suggestions thanks",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30dr9i",
+        "post_id": "1qt5fx6",
+        "parent_id": "1qt5fx6",
+        "author": "jacek2023",
+        "body": "Top 1% Poster",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/r/LocalLLaMA/comments/1qqpon2/opencode_llamacpp_glm47_flash_claude_code_at_home/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30dvu6",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30dr9i",
+        "author": "Potential_Block4598",
+        "body": "F**k yeah! THAT",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30ebep",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30dvu6",
+        "author": "Potential_Block4598",
+        "body": "No I take it back Open code is fine I haven't fully tried it tbh so let us see!",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/jacek2023/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o30evk6",
+        "post_id": "1qt5fx6",
+        "parent_id": "o30dvu6",
+        "author": "jacek2023",
+        "body": "Top 1% Poster I'm continuing my experiment: I now have a working shooter with a starfield, a procedurally generated ship and enemies, and explosions (the graphics are all very basic). The goal is to avoid writing a single line of code and just observe what OpenCode produces. I'm only giving feedback when something looks fucked up in the game, I am not fixing compilation errors. I'd like to try other models and agentic systems (I really liked the Mistral vibe), but since this setup is working, I'm more interested in seeing how far I can push it.",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [
+            "Mistral"
+          ],
+          "mentioned_models": [
+            "Mistral"
+          ]
+        }
+      },
+      {
+        "comment_id": "o35bhw2",
+        "post_id": "1qt5fx6",
+        "parent_id": "1qt5fx6",
+        "author": "Old-Material-5237",
+        "body": "Yeah, this pretty much matches what many people run into with local agentic setups. The space feels weak mainly because most tools were built as demos, not for heavy, real-world automation. Things like Cline or Goose wrap models that were designed for chat, not long, structured analysis. When you push them into autonomous workflows, their limits show up fast. Local models also struggle with long context and multi-step reasoning. Even if they technically support big context windows, they often default to dumping everything they see, which explains the huge function listings and slow prefills. The agent doesn't really understand cost, time, or relevance. Another issue is control. Most frameworks rely on prompt instructions instead of solid execution logic. So instead of building a high-level picture first, the agent often goes straight into exhaustive enumeration. People have made local agentic systems work, but usually in narrow, constrained pipelines. Precomputed static analysis, summaries instead of raw code, hard output limits, and very fixed workflows seem to be common. So your experience sounds normal. The idea isn't dead, but the ecosystem is still early, and \"working\" usually means heavily constrained rather than fully autonomous.",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o361i9q",
+        "post_id": "1qt5fx6",
+        "parent_id": "o35bhw2",
+        "author": "Potential_Block4598",
+        "body": "Yes total the case There are some knobs like cline supports a more compact prompt Idk how much of an actual quality vs performance is the tradeoff As do function listing and similar issues, mot only models aren't mature but even MCP itself (it should be limited by design IMO maybe in a next iteration or it should have state based calls (like next_function tool!)) even the malware sample I am analyzing impacts performance and quality greatly ( for an example a Go sample is much much worse than C or C++ based malware ) But for me it seems like a glimpse into the future And additionally, it feels quite sad that local model are that limited (from benchmark aggregators like artificial analysis, it feels like open and lack models are greatly catching up but then comes this issue which is much harder to pin down and understand through benchmarks alone IMO) It feels arbitrary not ever models works, non-linear, not every agent work well, a model good with an agent could break with another and so on Meanwhile I don't want my model to be great through intrinsic knowledge as much as tool usage (search ...etc) And why aren't open models good at this yet ??",
+        "created_at": "2026-01-26T17:06:48.017317",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 21,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Question%20%7C%20Help%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [],
+      "mentioned_models": [
+        "Qwen3",
+        "Qwen 3"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:06:48.017317"
+  },
+  {
+    "post_id": "1lhdy7m",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1lhdy7m/agentic_ai_platform",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1lhdy7m/agentic_ai_platform",
+    "author": "monsterindian",
+    "title": "Agentic ai platform",
+    "body": "Question | Help \nGuys, I have been looking for an agentic ai plaform like dify with no luck. I need to build agentic ai for the financial domain. Running dify on docker throws so many errors while file processing. I have timried lyzr.ai. I am not technical and need something which has a clean UI. Flowise is throwing errors while installing:( \nWe built an observability + evaluation platform for local LLMs. 100% free and open source.\ngithub.com",
+    "created_at": "2025-06-25T17:06:49.707527",
+    "time_window": "W1",
+    "topics": [
+      "Agentic AI",
+      "Open Source LLM",
+      "LLM Evaluation"
+    ],
+    "comments": [
+      {
+        "comment_id": "mz3vt60",
+        "post_id": "1lhdy7m",
+        "parent_id": "1lhdy7m",
+        "author": "thedatamafia",
+        "body": "Can you tell your requirements",
+        "created_at": "2025-06-25T17:06:49.707527",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "mz3zzre",
+        "post_id": "1lhdy7m",
+        "parent_id": "mz3vt60",
+        "author": "monsterindian",
+        "body": "1. Ai agents must be able to invest data, via file upload (excel, CSV, pdf, word,). 2. Data ingestion via api. 3. Ai agentic flow is defined on what it needs to do. 4. Output in required format including api or writing to db. 5. Agents exposed via api or chat ui.",
+        "created_at": "2025-06-25T17:06:49.707527",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "mzji0w0",
+        "post_id": "1lhdy7m",
+        "parent_id": "mz3zzre",
+        "author": "alphakue",
+        "body": "give langflow a try",
+        "created_at": "2025-06-25T17:06:49.707527",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/Direct_Turn_1484/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "mzjsw1m",
+        "post_id": "1lhdy7m",
+        "parent_id": "mz3zzre",
+        "author": "Direct_Turn_1484",
+        "body": "Since you said you're not a technical person, you're going to have a much better time doing this if you find someone who is a technical person to work on this for you. Not sure if this is business or pleasure, but if business it'll probably go a lot smoother if you hire someone with the skills to do this.",
+        "created_at": "2025-06-25T17:06:49.707527",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "mzi49pt",
+        "post_id": "1lhdy7m",
+        "parent_id": "1lhdy7m",
+        "author": "secopsml",
+        "body": "Install and configure properly dify or flowise. You won't get much better than dify for free. Best paid tool for prototyping is probably wordware",
+        "created_at": "2025-06-25T17:06:49.707527",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/CantaloupeNo6326/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 5,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Question%20%7C%20Help%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [],
+      "mentioned_models": []
+    },
+    "scraped_at": "2026-06-25T17:06:49.707527"
+  },
+  {
+    "post_id": "1htbe7x",
+    "subreddit": "MachineLearning",
+    "url": "https://www.reddit.com/r/MachineLearning/comments/1htbe7x/discussion_agentic_ai_yet_another_hyped_interface",
+    "permalink": "https://www.reddit.com/r/MachineLearning/comments/1htbe7x/discussion_agentic_ai_yet_another_hyped_interface",
+    "author": "yldedly",
+    "title": "[Discussion] Agentic AI: Yet another hyped interface or a paradigm shift?",
+    "body": "Discussion \nThis post is for discussing the radius of impact of Agentic AI. \nAgentic AI is being served as something new on the plate, while looking deeply it looks like a conventional system which interacts with some other APIs through a framework. \nLooking through different lenses: \n Developer \nNot much deviation from conventional development. Hence minimal learning curve \n Customers \nAgentic AI might shift focus from web surfaces to chatbots or probably some new kind of surfaces. Given this happens, the role of intuitive/interative UIs may reduce \n Business \nIncrease in efficiency for some, while loss for business for others. Service based companies might spearhead the development initially. \n Radius \nB2B or B2C, which will be impacted more. \nSkills to transform your career and life. From critical skills to technical topics, Udemy supports your professional development.\n* 71% off\nAmazon Web Services (AWS) Certified - 5 Certifications!\nAWS Certified (AI & Cloud Practitioner, Solutions Architect, Developer, SysOps Administrator Associate)\n* \nArtificial Intelligence A-Z 2025: Agentic AI Gen AI and RL\nCombine the power of Agentic AI, Generative AI, Reinforcement Learning to create powerful AI for Real-World applications\n* 76% off\nPython Mega Course: Build 20 Real-World Apps and AI Agents\nLearn Python from Beginner to Pro. Build 20 Real-World Apps with Python Including AI Agents with LangChain.\n* 50% off\nAI SEO Course 2025: From Zero to Page-One Results (AEO GEO)\nRank #1 on Google, ChatGPT etc., using top 0.1% expert's proven blueprint for AEO, GEO and AI SEO. All in just 50 days\n* 67% off\nLearn Python Programming Masterclass\nThis Python For Beginners Course Teaches You The Python Language Fast. Includes Python Online Training With Python 3\n* 76% off\nSpark and Python for Big Data with PySpark\nLearn how to use Spark with Python, including Spark Streaming, Machine Learning, Spark 2.0 DataFrames and more!\nFix your internal comms challenges with 50+ AI prompts\n* \n* \n* \n* \n* \n* \nsociabble.com \nDownload\n* \n* \n* \n* \nbob.ibm.com",
+    "created_at": "2025-06-25T17:06:51.294090",
+    "time_window": "W1",
+    "topics": [
+      "Agentic AI",
+      "LLM Evaluation"
+    ],
+    "comments": [
+      {
+        "comment_id": "m5c1d4b",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "yldedly",
+        "body": "I don't understand what has changed since autoGPT, tool use and other stuff we had 2 years ago which didn't produce functioning agents. Are there any new ideas? Do people just want to believe?",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/SlayahhEUW/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5c3suo",
+        "post_id": "1htbe7x",
+        "parent_id": "m5c1d4b",
+        "author": "SlayahhEUW",
+        "body": "Top 1% Commenter More compute, and optimized compute. Transformers are now aligned for almost complete optimum on hardware with FlashAttention3. ARC-AGI problems are being solved on a human-like level with the o3-model with the pricetag of 2000$/example. From a logical point of view, a single LLM inference pass is doing induction, while recursive passes are able to perform deduction. The problem lies in that the search space explodes in deductive tasks as they are put today, hence the price tag. I personally think that the agentic/recurrent approach is correct, and will progress the field, but that the deduction needs to happen on a conceptual space that is constrained, and a compute that scales linearly. Such as Mamba-based approaches on embedding-spaces that encode concepts rather than tokens of words.",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5d45rn",
+        "post_id": "1htbe7x",
+        "parent_id": "m5c3suo",
+        "author": "dkodev",
+        "body": "I feel eventually LLMs will move from monolith to specialized (and hence smaller) to be run locally or in embedded mode. Soon we will see a flood of agents using large models only to realize later that the use of full LLM is overkill for the use-case. I think this specialization will bring scalability.",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5cay07",
+        "post_id": "1htbe7x",
+        "parent_id": "m5c3suo",
+        "author": "igneus",
+        "body": "This is a great summary, and it's also the thing that puzzles me about the confidence of AI companies in the potential of agents. Inductive reasoning as emulated by LLMs is inherently non-determinstic. Oftentimes problems are presented without any particular solution in mind, so the fitness of the result isn't dependent _a priori_ on meeting specific criteria. In other words, inductive reasoning is the logical equivalent of firing an arrow at a wall then painting a target around it. When you don't know where you're going, any road will get you there. This being the case, I don't see how agents are meant to move the needle when attacking hard problems involving deductive reasoning. Without the subjective component that allows a question to be retrofitted to an answer, the likelihood of success feels more a function of how much compute you have rather than which model you ultimately decide to use.",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5c6n5o",
+        "post_id": "1htbe7x",
+        "parent_id": "m5c3suo",
+        "author": "yldedly",
+        "body": "Wasn't the main problem with the first generation of LLM agents that they lacked any robustness or adaptability? How does search over prompts help with work flows that should be executed on the first try (or at least reasonably quickly)? On constraining the conceptual space, I agree, but how do you do that without hardcoding it for each task? If you could get an LLM to figure out how to constrain the space, you wouldn't need to.",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5cbrxb",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "PabloPudding",
+        "body": "At the moment, it's just an orchestration of API-calls combined with the language abilities of a LLM. For me, it's the next step in automation and has the possibility to make information more accessible. Just look inside a company, where now everyone has the possibility to call internal APIs instead of only developers. So less work for analysts and so on... I think, the industry is figuring out at the moment, how agents can be used. The public examples are not convincing yet, but I see the value in the company internal processes",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/baby-wall-e/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5c7jvj",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "baby-wall-e",
+        "body": "Same s***. Just reinventing the wheel to get more investment money. Fix your internal comms challenges with 50+ AI prompts sociabble.com Download",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/ureepamuree/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5c5xxk",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "ureepamuree",
+        "body": "How is agentic keyword any different from the classical agent in RL? [deleted] • 1y ago It doesn't need to be, but agentic is being used in industry now - outside of research. As it's expanded to business context and automation behavior within real world systems.",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/r/MachineLearning/comments/1htbe7x/comment/m5ciu3l/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5c8blm",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "Green-Quantity1032",
+        "body": "It's RAG all the way down (or rather there's an LLM at the bottom) [deleted] • 1y ago I am still confused about what agentic truly means.",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/r/MachineLearning/comments/1htbe7x/comment/m5c1ice/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "n7losny",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "askolein",
+        "body": "maybe it means that \"it acts\" instead of just \"answers prompts\"",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m602jpt",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "rand3289",
+        "body": "Agency should imply interaction with the environment as opposed to having data shoved down the pipe. Here is Richard Sutton's presentation about agents: https://www.youtube.com/watch?v=YV-wBjel-9s&t=327s Also, here is something I wrote on this topic a couple of days ago if you are interested:",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.youtube.com/watch?v=YV-wBjel-9s&t=327s",
+            "https://www.reddit.com/r/agi/comments/1hur9iu/modeling_agents_interactions_with_an_environment/",
+            "https://www.reddit.com/user/chezuba/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5c19w8",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "Exarctus",
+        "body": "If you're referring to the latest scam in crypto, it's a scam. [deleted] • 1y ago A lot of you are inexperienced with real world enterprise. Agentic as a concept is very real. It is next generation automation. Groundbreaking capabilities that will only get better. Thus, the hype is real.",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/r/MachineLearning/comments/1htbe7x/comment/m5cinu2/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "m5d2pao",
+        "post_id": "1htbe7x",
+        "parent_id": "1htbe7x",
+        "author": "dkodev",
+        "body": "Thanks u/InternationalSwan162 . Can you enlighten us too on how it will change the game and how it is different from some automation scripts? Will it create a new ecosystem or improve the existing system ?",
+        "created_at": "2025-06-25T17:06:51.294090",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/InternationalSwan162/"
+          ],
+          "mentioned_users": [
+            "InternationalSwan162"
+          ],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 13,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/MachineLearning/?f=flair_name%3A%22Discussion%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [
+        "Google"
+      ],
+      "mentioned_models": []
+    },
+    "scraped_at": "2026-06-25T17:06:51.294090"
+  },
+  {
+    "post_id": "1qgc3hb",
+    "subreddit": "ClaudeAI",
+    "url": "https://www.reddit.com/r/ClaudeAI/comments/1qgc3hb/i_built_my_own_claude_code_to_learn_how_agentic",
+    "permalink": "https://www.reddit.com/r/ClaudeAI/comments/1qgc3hb/i_built_my_own_claude_code_to_learn_how_agentic",
+    "author": "laynepenney",
+    "title": "I built my own Claude Code to learn how agentic AI works",
+    "body": "Built with Claude \n \n \nHey everyone, \nI've been using Claude Code and OpenAI Codex and wanted to understand how they actually work under the hood. So I built my own. \n Codi is an open-source AI coding assistant for the terminal, inspired by Claude Code and Codex. \nWhat it does:\n * Read/write/edit files with diff previews \n * Search code with regex, run shell commands \n * Generate commits, PRs, tests \n * Built-in slash commands (/commit, /test, /refactor, etc.) \n * Session persistence and memory across conversations \n\nWhat makes it different:\n * Multi-provider : Works with Claude, GPT, Ollama, or any OpenAI-compatible API \n * Run it free : Use Ollama with local models (no API key needed) \n * Safety first : Diff preview before every file change, approval prompts for dangerous ops, full undo history \n\nQuick start with Ollama (free):\n\n \n\nGitHub: \nBuilt with TypeScript, Apache 2.0 licensed. Would love feedback from the community - what features would you want? \nToo many tools slowing down your marketing team? ClickUp helps teams plan campaigns, manage tasks, and stay aligned.\nView More\nclickup.com \n \nWhat Would You Build If Coding Wasn't the Bottleneck?\nView More\n8080.ai",
+    "created_at": "2026-01-26T17:06:52.892033",
+    "time_window": "W3",
+    "topics": [
+      "Agentic AI",
+      "Open Source LLM"
+    ],
+    "comments": [
+      {
+        "comment_id": "o0ghoo6",
+        "post_id": "1qgc3hb",
+        "parent_id": "1qgc3hb",
+        "author": "laynepenney",
+        "body": "My goal was not to replace or even compete with Claude Code: I wanted to see what it could build. And more importantly, this was a learning project for me.",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/InterstellarReddit/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "o0e6idd",
+        "post_id": "1qgc3hb",
+        "parent_id": "1qgc3hb",
+        "author": "InterstellarReddit",
+        "body": "Top 1% Commenter What base did you use to build this ? Like what did you start with and then add your features to it? Like did you use Claude code or qwen etc",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "o0ggtdh",
+        "post_id": "1qgc3hb",
+        "parent_id": "o0e6idd",
+        "author": "laynepenney",
+        "body": "I used Claude code for almost everything",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/InterstellarReddit/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "o0gj1xv",
+        "post_id": "1qgc3hb",
+        "parent_id": "o0ggtdh",
+        "author": "InterstellarReddit",
+        "body": "Top 1% Commenter So you did it from scratch completely? That's pretty impressive I've been wanting to do something like this but I wanna start with a good base",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o0fqp0h",
+        "post_id": "1qgc3hb",
+        "parent_id": "1qgc3hb",
+        "author": "upboat_allgoals",
+        "body": "benchmarks",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o0gh1kr",
+        "post_id": "1qgc3hb",
+        "parent_id": "o0fqp0h",
+        "author": "laynepenney",
+        "body": "I'm not competing. This was a learning project built with Claude Code.",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 1,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/ThunkerKnivfer/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "o0h4whd",
+        "post_id": "1qgc3hb",
+        "parent_id": "o0fqp0h",
+        "author": "ThunkerKnivfer",
+        "body": "What would you define a benchmark to be regarding a CLI tool?",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o0kh3nf",
+        "post_id": "1qgc3hb",
+        "parent_id": "o0h4whd",
+        "author": "Acrobatic-Layer2993",
+        "body": "Hmmm... we need specs for coding projects that exercise coding agents. Building a web browser from scratch might be too much, but it has to be something that the model couldn't just do on it's own, but is only possible with a sufficient agent. Further, it has to have increasing difficulty to differentiate between agents capabilities. I know OP doesn't want or need this, but if he had something like this it might help bring his agent to the next level (if he was interested).",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o0gllk0",
+        "post_id": "1qgc3hb",
+        "parent_id": "1qgc3hb",
+        "author": "ThunkerKnivfer",
+        "body": "So much negativity, I don't get it. Of course we are experimenting with developing new stuff now that we have Claude Code et al. I think it's great. Maybe we won't hit the mother load today but one day someone will surely find it. So until then I think it's great that we experiment.",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 0,
+        "extracted": {
+          "urls": [
+            "https://www.reddit.com/user/ThunkerKnivfer/"
+          ],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "o0cugaj",
+        "post_id": "1qgc3hb",
+        "parent_id": "1qgc3hb",
+        "author": "ThunkerKnivfer",
+        "body": "Excited to try this out!",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      },
+      {
+        "comment_id": "o0ghaav",
+        "post_id": "1qgc3hb",
+        "parent_id": "o0cugaj",
+        "author": "laynepenney",
+        "body": "it's not Claude Code but I thought it was cool for only a few weeks of work. Claude Code is very powerful",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 1,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": [
+            "Claude"
+          ]
+        }
+      },
+      {
+        "comment_id": "o0ggyks",
+        "post_id": "1qgc3hb",
+        "parent_id": "1qgc3hb",
+        "author": "laynepenney",
+        "body": "\"to learn how agentic AI works\"",
+        "created_at": "2026-01-26T17:06:52.892033",
+        "depth": 0,
+        "extracted": {
+          "urls": [],
+          "mentioned_users": [],
+          "mentioned_subreddits": [],
+          "mentioned_companies": [],
+          "mentioned_models": []
+        }
+      }
+    ],
+    "comment_count": 12,
+    "extracted": {
+      "urls": [
+        "https://github.com/laynepenney/codi",
+        "https://github.com/laynepenney/codi.git",
+        "https://www.reddit.com/r/ClaudeAI/?f=flair_name%3A%22Built%20with%20Claude%22"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [
+        "ClaudeAI"
+      ],
+      "mentioned_companies": [
+        "Openai"
+      ],
+      "mentioned_models": [
+        "Claude",
+        "Codex",
+        "llama3.2"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:06:52.892033"
+  },
+  {
+    "post_id": "1or2077",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/want_to_learn_more_about_agentic_ai",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/want_to_learn_more_about_agentic_ai",
+    "author": "SkyFeistyLlama8",
+    "title": "Comments Section",
+    "body": "Mickenfox \n• 8mo ago \nIt's 90% marketing buzzword. \n \n Superb_Practice_4544 \n• 8mo ago \nTrue, the space is overloaded with hype terms I just used them so folks know what stack I've played with - but yeah, I'm more into making stuff work than naming it fancy. Got any favorite non-buzzwordy projects to learn from? \n More replies \n \n SkyFeistyLlama8 \n• 8mo ago \n Top 1% Commenter\nAgentic = tool calling. I'm starting to hate the word because every AI influencer shillbot is using and misusing it to turn a bunch of chained LLM calls into some magical construct. \nThat said, I like how Microsoft's Agent Framework approaches agent chains and workflows, although it isn't very good at RAG for the moment. \n \n Superb_Practice_4544 \n• 8mo ago \nYeah, fair point - the term agentic is getting abused a lot lately I'm mostly just trying to understand how to make my skillset more valuable and industry ready. What do you think is worth learning or experimenting with right now? \n \n SkyFeistyLlama8 \n• 8mo ago \n Top 1% Commenter\nRAG is important for enterprise implementations. You need to know the entire RAG pipeline: how to prep data for ingest, chunking, embedding schemes, data storage, vector and other kinds of search, using search context effectively within a prompt, and then dealing with citations and latency. You could get fancy by implementing a Magentic or ReAct flow where agents check the generated RAG reply for accuracy, restarting the loop if the answer needs fixing or sending the answer onwards. \nMCP and A2A are the glue to enable tool calling for data domains you don't control. \n More replies \n More replies \n \n micheal_Y \n• 8mo ago \nThat's great. How did u understand this ? What is the suggestion for the one who want to be current of ur state \n \n Superb_Practice_4544 \n• 8mo ago \nI followed courses of leading org in this field like anthropic and lang chain on deeplearning.ai. Luckily my current company needed some agentic solutions, so I volunteered and learnt while building. But I still want more experience by working on complex projects having cutting edge technologies. \n More replies \n Practices for hosting LLaMA models locally \n How to optimize LLaMA for specific tasks \n Comparing LLaMA with other language models \n Unique applications of LLaMA in everyday life \n Challenges faced when running LLaMA locally \n \n \n \nPublic \nAnyone can view, post, and comment to this community\n0 0\n * Reddit reReddit: Top posts of November 7, 2025\n * \n * Reddit reReddit: Top posts of November 2025\n * \n * Reddit reReddit: Top posts of 2025\n * \n\n * News \n * Best of Reddit \n * Best of Reddit in Portuguese \n * Best of Reddit in German \n * Reddit Rules \n\n \nJoin the most real place on the internet \n Sign in with Apple\nContinue with Phone Number",
+    "created_at": "2025-10-28T17:06:54.563974",
+    "time_window": "W2",
+    "topics": [
+      "RAG",
+      "Embeddings",
+      "Agentic AI"
+    ],
+    "comments": [],
+    "comment_count": 0,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnq2wc1/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnp7b0i/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnp7b0i/?force-legacy-sct=1",
+        "https://www.reddit.com/posts/2026/tl-de/",
+        "https://www.reddit.com/posts/2026/global/",
+        "https://www.reddit.com/posts/2026/tl-pt-BR/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnr1sr1/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnpq6dh/",
+        "https://www.reddit.com/posts/2025/global/",
+        "https://www.reddit.com/news/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnp75o1/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnpq6dh/?force-legacy-sct=1",
+        "https://www.reddit.com/user/micheal_Y/",
+        "https://www.reddit.com/answers/e53a94f3-7f56-4bc1-b3d6-0a873ecc8971/?q=Unique+applications+of+LLaMA+in+everyday+life&source=PDP",
+        "https://www.redditinc.com/policies/content-policy",
+        "https://x.com/localllamasub",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nno9h5q/",
+        "https://www.reddit.com/user/Superb_Practice_4544/",
+        "https://www.reddit.com/answers/8aa6ea31-7566-4871-9d69-042b2587dc0b/?q=Practices+for+hosting+LLaMA+models+locally&source=PDP",
+        "https://id.rlcdn.com/472486.gif",
+        "https://www.reddit.com/answers/3a2e9541-7bd4-4ecd-97d2-d745f71e10b1/?q=Comparing+LLaMA+with+other+language+models&source=PDP",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nno9h5q/?force-legacy-sct=1",
+        "https://www.reddit.com/answers/71742f71-2dcf-4fe5-9a24-dc679088f1b0/?q=Challenges+faced+when+running+LLaMA+locally&source=PDP",
+        "https://www.reddit.com/posts/2025/november-7-1/global/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnq2wc1/?force-legacy-sct=1",
+        "https://www.reddit.com/posts/2025/november/global/",
+        "https://www.reddit.com/user/Mickenfox/",
+        "https://www.reddit.com/r/LocalLLaMA/comments/1or2077/comment/nnq3ohq/",
+        "https://www.reddit.com/answers/a10be3fd-6fb9-4126-a424-eb17c5b53d91/?q=How+to+optimize+LLaMA+for+specific+tasks&source=PDP",
+        "https://www.reddit.com/user/SkyFeistyLlama8/"
+      ],
+      "mentioned_users": [
+        "SkyFeistyLlama8"
+      ],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [
+        "Microsoft",
+        "Anthropic"
+      ],
+      "mentioned_models": [
+        "Llama"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:06:54.563974"
+  },
+  {
+    "post_id": "1qfpdml",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qfpdml/built_a_small_localfirst_playground_to_learn",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1qfpdml/built_a_small_localfirst_playground_to_learn",
+    "author": "ProfessionOk5407",
+    "title": "Built a small local-first playground to learn agentic AI (no cloud, no APIs)",
+    "body": "Other \nI built this mainly for myself while trying to understand agentic AI without jumping straight into large frameworks. \nSutra is a small, local-first playground that runs entirely on your laptop using local models (Ollama). No cloud APIs, no costs, and very minimal abstractions. \nIt is not production-ready and not trying to compete with LangChain or AutoGen. The goal is just to understand agent behavior, sequencing, and simple pipelines by reading and running small pieces of code. \n * Repo: \n\nWould appreciate feedback from people who also prefer learning locally. \nCopilot sees everything. Does your client know what \"everything\" includes?\nContact Us",
+    "created_at": "2026-01-26T17:06:56.257200",
+    "time_window": "W3",
+    "topics": [
+      "Agentic AI",
+      "Open Source LLM",
+      "Code Generation"
+    ],
+    "comments": [],
+    "comment_count": 0,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Other%22",
+        "https://github.com/SutraLabs/sutra"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [],
+      "mentioned_companies": [],
+      "mentioned_models": []
+    },
+    "scraped_at": "2026-06-25T17:06:56.257200"
+  },
+  {
+    "post_id": "1qya1ek",
+    "subreddit": "LocalLLaMA",
+    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1qya1ek/general_agentic_and_swarm_system_with",
+    "permalink": "https://www.reddit.com/r/LocalLLaMA/comments/1qya1ek/general_agentic_and_swarm_system_with",
+    "author": "Unknown",
+    "title": "General agentic (and swarm) system with observability and learning in mind.",
+    "body": "Resources \n r/AI_Agents \n• 5 mo. ago\n Weekly Thread: Project Display \n marko_mavecki \nFor the last few days I have been working with coding agents to build a new agentic solution. \nSomething that would help people: \n * learn how agents work \n * actually SEE how agents organize themselves \n * build agentic swarms that achieve certain goals \n * customize system messages that make this whole thing possible \n * understand that agents no longer have to rely on workflows \n * understand that REAL agentic solutions are no longer the domain of big players \n * build and refine incredible agents \n\nI am thrilled to share the result with you. \nHere is a video of how a single agent recursively multiplied itself to solve a looong math calculation (as can be seen on the screenshot). \n \nI opensourced the code but be aware that I am still working on security and some bugs. But I decided that it needs to be released ASAP before big players do something similar. \n \nBTW, Last night on my local instance I defined a coding agent and let it use filesystem tools (create/update) and i gave it coding task. And it did! It can even update the file by modifying few rows instead of the whole file. This is so exciting. \n \n3\n \nI am sharing my open project in hope that the comminuty will benefit from it. It is definitely related with local language models as well. The demo that I share is based on Grok 4 fast, BUT I also tested this on a local model and the agent call graph looked equally impressive. It was the qwen3-vl-8b-instruct. \nPlease let me know if you have any questions. \nJoin ISACA by 30 June and save 50% on membership & all AI training. Become part of a community of 195k IS/IT professionals.\nisaca.org",
+    "created_at": "2026-01-26T17:06:57.762839",
+    "time_window": "W3",
+    "topics": [
+      "Agentic AI",
+      "Code Generation"
+    ],
+    "comments": [],
+    "comment_count": 0,
+    "extracted": {
+      "urls": [
+        "https://www.reddit.com/r/AI_Agents/comments/1qvu2c4/comment/o41ymww/",
+        "https://github.com/user-attachments/assets/3da4159e-aa28-4f9e-ba85-cd175c41002b",
+        "https://www.reddit.com/r/LocalLLaMA/?f=flair_name%3A%22Resources%22",
+        "https://github.com/MarekSurma/ClearSwarm",
+        "https://www.reddit.com/r/AI_Agents/",
+        "https://www.reddit.com/r/AI_Agents/comments/1qvu2c4/weekly_thread_project_display/",
+        "https://www.reddit.com/user/marko_mavecki/"
+      ],
+      "mentioned_users": [],
+      "mentioned_subreddits": [
+        "AI_Agents"
+      ],
+      "mentioned_companies": [],
+      "mentioned_models": [
+        "Grok 4",
+        "qwen3"
+      ]
+    },
+    "scraped_at": "2026-06-25T17:06:57.762839"
+  }
+]

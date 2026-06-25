@@ -20,7 +20,7 @@ METHOD_INFO = {
         "icon": "🔮",
     },
     "tfidf": {
-        "label": "TF-IDF",
+        "label": "TF-IDF (Default)",
         "desc": "Sparse term-frequency vectors with cosine similarity. "
                 "Best for exact keyword / name matches (model names, acronyms).",
         "speed": "Fast",
@@ -41,11 +41,20 @@ METHOD_INFO = {
         "icon": "🔄",
     },
     "ensemble": {
-        "label": "Ensemble (RRF Fusion)",
+        "label": "Ensemble (Vector+BM25+TF-IDF)",
         "desc": "Runs Vector + BM25 + TF-IDF in parallel and fuses results with "
-                "Reciprocal Rank Fusion (k=60). Best overall answer quality.",
-        "speed": "Slowest",
+                "Reciprocal Rank Fusion (k=60). Best single-system answer quality.",
+        "speed": "Slower",
         "icon": "⚡",
+    },
+    "hybrid": {
+        "label": "Hybrid (Vector + Graph + RRF)",
+        "desc": "Runs Vector search (ChromaDB) and Graph traversal (Neo4j) in parallel. "
+                "LLM routes the query type, results fused with RRF, graph analytics "
+                "(sentiment trends, top authors, related entities) added to context. "
+                "Requires NEO4J credentials in .env.",
+        "speed": "Slowest",
+        "icon": "🧠",
     },
 }
 
@@ -96,16 +105,17 @@ with st.sidebar:
         options=METHODS,
         index=0,
         format_func=lambda m: (
-            f"{METHOD_INFO[m]['icon']} "
-            f"{METHOD_INFO[m]['label']}"
+            f"{METHOD_INFO.get(m, {}).get('icon', '•')} "
+            f"{METHOD_INFO.get(m, {}).get('label', m)}"
         ),
     )
 
-    info = METHOD_INFO[method]
-    st.caption(
-        f"**{info['label']}** — {info['speed']}"
-    )
-    st.caption(info["desc"])
+    info = METHOD_INFO.get(method, {})
+    if info:
+        st.caption(
+            f"**{info['label']}** — {info['speed']}"
+        )
+        st.caption(info["desc"])
 
     st.divider()
 
@@ -162,21 +172,55 @@ def format_sources(sources: list[dict]) -> str:
             url = s.get("url", "")
             if url and url not in seen:
                 seen.add(url)
+                title = s.get("title", "")
+                sub = s.get("subreddit", "")
+                date = s.get("date", "")
+                score = s.get("score", 0)
+                label = (
+                    f"\"{title}\"" if title
+                    else "Post"
+                )
                 lines.append(
-                    f"- r/{s.get('subreddit', '')} "
-                    f"({s.get('time_window', '')}) "
-                    f"— score: {s.get('score', 0)} "
+                    f"- {label} "
+                    f"(r/{sub}, {date}) "
+                    f"— score: {score} "
                     f"— [link]({url})"
                 )
         else:
             author = s.get("author", "unknown")
+            date = s.get("date", "")
             score = s.get("score", 0)
             lines.append(
                 f"- Comment by u/{author} "
-                f"({s.get('time_window', '')}) "
+                f"({date}) "
                 f"— score: {score}"
             )
     return "\n".join(lines)
+
+
+def format_hybrid_meta(result: dict) -> str:
+    parts = []
+
+    route = result.get("route")
+    if route:
+        parts.append(f"Route: **{route}**")
+
+    vc = result.get("vector_count")
+    gc = result.get("graph_count")
+    if vc is not None and gc is not None:
+        parts.append(
+            f"Vector: {vc} docs · "
+            f"Graph: {gc} docs · "
+            f"Fused: {result.get('doc_count', '?')}"
+        )
+
+    if not parts:
+        return ""
+
+    return (
+        "\n\n---\n"
+        f"*🧠 {' · '.join(parts)}*"
+    )
 
 
 def run_query(question: str) -> dict:
@@ -200,7 +244,9 @@ def run_query(question: str) -> dict:
 
 st.title("Reddit RAG")
 
-method_label = METHOD_INFO[method]["label"]
+method_label = METHOD_INFO.get(
+    method, {}
+).get("label", method)
 st.caption(
     f"Method: **{method_label}** · "
     f"LLM: **{llm_name}** · "
@@ -246,6 +292,8 @@ if question:
                 f"{windows}:**\n\n{answer}"
             )
 
+        hybrid_md = format_hybrid_meta(result)
+
         result_method = result.get(
             "method", method
         )
@@ -255,7 +303,10 @@ if question:
         )
 
         full_response = (
-            answer + sources_md + method_tag
+            answer
+            + sources_md
+            + hybrid_md
+            + method_tag
         )
         st.markdown(full_response)
 
